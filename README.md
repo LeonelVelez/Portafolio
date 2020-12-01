@@ -1,7 +1,7 @@
-# Getting Started with Create React App
+# My Portfolio, Proyect Open Source
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+Es un proyecto de código abierto donde expongo todo mi trabajo y expiro como desarrollador. You can visit : 
+[My Portafolio Published](http://leonelvelez.me.com "My Portafolio Published")
 ## Available Scripts
 
 In the project directory, you can run:
