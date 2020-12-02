@@ -1,45 +1,39 @@
 import {Component } from 'react';
+import Vars from './../../vars'
  
-export default class Header extends Component {
-  lista = [{
-      id: 1,
-      nombre: 'About Me'
-  },
-  {
-    id: 2,
-    nombre: 'How i can help u'
-  },
+export default class Header extends Component {  
+ menu =[];
+ constructor(props) {
+    super(props);
+    this.menu =  Vars.Menu;
+    
+  }
 
-  {
-    id: 3,
-    nombre: 'My Cv'
-  },
-  
-]
-  valor;
   render() {
 
     return (
-      <div>
-          <input value={this.valor}>
-
-          </input>
-          <h1>
-                {this.valor}
-          </h1>
+      <div>          
           <header>
-            <ul>                
-            {this.lista.map(x=>{
-                return <li key={x.id}>
-                    {x.nombre}
-                </li>
-            })}                                            
-            </ul>
-        </header>
-        
-      </div>  
-      
-      
+              <li>
+                <p>&#60; &#47; &#62;</p>
+              </li>  
+              <li>
+                 <p>
+
+                 <p>
+                </p>
+                      
+                </p>                 
+              </li>  
+          </header>        
+          <ul>                
+              {
+                this.menu.map((obje)=>{
+                return <li key={obje.id}>{obje.name}</li>
+                })                                                              
+              }                                          
+          </ul>
+      </div>              
     );
   }
 }
