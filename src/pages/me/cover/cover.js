@@ -1,6 +1,7 @@
 import {Component} from 'react'
-import portada from './../../img/mePortada.jpg'
-import Vars from './../../vars'
+import portada from './../../../img/mePortada.jpg'
+import Vars from './../../../vars'
+import './cover.css'
 export default class Cover extends Component
 {
     constructor(props)   
@@ -11,8 +12,8 @@ export default class Cover extends Component
     render()
     {
         return (
-            <div>
-                <img src={portada}  alt="Leonel Vélez"></img>
+            <div className="container row" id="portada">
+                <img id="portadaImg" src={portada}  alt="Leonel Vélez"></img>
                 <section>
                     <h1>
                         {Vars.ParagraphHome.title}
