@@ -1,0 +1,41 @@
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header li{
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+}
+
+#nav
+{
+    display: none;
+}
+
+#logoHeader{
+    width: 50px;
+    height: 50px;        
+}
+#logoMenu p
+{
+    border-bottom: 1px;
+    height: 1px;
+    width: 30px;
+    border-style:solid ;
+    border-color: black;
+    background: black;
+    margin: 2px;
+}
+
+#logoMenu 
+{
+    border: 0px;
+    padding: 0px;
+    display: flex;    
+    flex-direction: column;    
+    justify-content: center;    
+}

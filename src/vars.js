@@ -1,4 +1,7 @@
-
+let Names =  {
+    firtsName: 'Leonel',
+    secondName: 'Vélez'
+}
 let Vars = {
     Menu : [{
         id: 1,
@@ -25,9 +28,10 @@ let Vars = {
         subMenu:[] 
     },
 ],
-    Names : {
-        firtsName: 'Leonel',
-        secondName: 'Vélez'
+    
+    ParagraphHome:{
+        title: `Hi my name is ${Names.firtsName}, Im Back, Front, Philanthropist and Playboy`
     }
 }
 export default Vars;
+export {Names, Vars} ;

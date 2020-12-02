@@ -1,6 +1,7 @@
 import {Component } from 'react';
-import Vars from './../../vars'
- 
+import {Vars} from './../../vars'
+import './header.css' 
+import LogoHeader from './../../img/portada/logoHeader.svg'
 export default class Header extends Component {  
  menu =[];
  constructor(props) {
@@ -14,19 +15,19 @@ export default class Header extends Component {
     return (
       <div>          
           <header>
-              <li>
-                <p>&#60; &#47; &#62;</p>
+              <li >
+                <img id="logoHeader"  src={LogoHeader} alt="logo of Leonel Velez" >
+                </img>
               </li>  
               <li>
-                 <p>
-
-                 <p>
-                </p>
-                      
-                </p>                 
+                <div id="logoMenu">
+                  <p></p>
+                  <p></p>
+                </div>
+                 
               </li>  
           </header>        
-          <ul>                
+          <ul id="nav" >                
               {
                 this.menu.map((obje)=>{
                 return <li key={obje.id}>{obje.name}</li>
