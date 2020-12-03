@@ -10,7 +10,9 @@ export default class Header extends Component {
     this.state = {
       Menu: {
         gradosMenu : 'rotateY(90)',
-        open: false
+        open: false,
+        gradosButtonMenuTop : 'rotateZ(0)',
+        gradosButtonMenuBottom : 'rotateZ(0)'        
       }
     }
     console.log(this.state)
@@ -31,8 +33,8 @@ export default class Header extends Component {
                   }                                          
                 </ul>
                 <div id="logoMenu" onClick={this.onNav}>
-                  <p></p>
-                  <p></p>
+                  <p style={{transform : this.state.Menu.gradosButtonMenuTop}}></p>
+                  <p style={{transform : this.state.Menu.gradosButtonMenuBottom }}></p>
                 </div>
               </section>                            
           </header>                  
@@ -54,7 +56,9 @@ export default class Header extends Component {
     this.setState({
       Menu : {
         gradosMenu: 'rotateY(0deg)',
-        open : true
+        open : true,
+        gradosButtonMenuTop: 'rotateZ(360deg)',
+        gradosButtonMenuBottom: 'rotateZ(-360deg)'        
       }        
     })      
   }
@@ -63,7 +67,9 @@ export default class Header extends Component {
     this.setState({
       Menu : {
         gradosMenu: 'rotateY(90deg)',
-          open : false
+        open : false,
+        gradosButtonMenuTop: 'rotateZ(0deg)',
+        gradosButtonMenuBottom: 'rotateZ(0deg)'        
         }        
       })      
     }

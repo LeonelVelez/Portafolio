@@ -16,6 +16,7 @@ header section, img{
 #nav li{
     margin: 30px;
     list-style: none;
+    font-size: 20px;
     font-weight: 500;        
     
 }
@@ -28,12 +29,15 @@ header section, img{
     transform-origin: right;    
     transition: 0.2s;
     transform: rotateY(90deg);
+    
 
 }
 
 #logoMenu:hover{
     
     cursor: pointer;
+    
+
 
 }
 #logoHeader{
@@ -49,7 +53,13 @@ header section, img{
     border-color: black;
     background: black;
     margin: 2px;
+    transition: 0.2s;    
+            
 }
+
+
+
+
 
 #logoMenu 
 {
@@ -57,5 +67,5 @@ header section, img{
     padding: 0px;
     display: flex;    
     flex-direction: column;    
-    justify-content: center;    
+    justify-content: center;           
 }
