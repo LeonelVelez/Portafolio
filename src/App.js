@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import Header from './components/header/header'
-import Me from './pages/me/me';
-
+import Home from './pages/home/home';
 
 class App extends Component {
   
@@ -9,7 +8,7 @@ class App extends Component {
     return (
       <section>
         <Header></Header>       
-        <Me></Me> 
+        <Home></Home>
       </section>
       
     );

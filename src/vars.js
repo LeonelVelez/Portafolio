@@ -17,12 +17,18 @@ let Vars = {
     },
     {
         id: 3,
-        name : 'How Can I Help U',
+        name : 'Proyects',
         path: '',
         subMenu:[] 
     },
     {
         id: 4,
+        name : 'How Can I Help U',
+        path: '',
+        subMenu:[] 
+    },
+    {
+        id: 5,
         name : 'My Cv',
         path: '',
         subMenu:[] 

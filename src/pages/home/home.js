@@ -1,6 +1,6 @@
 import {Component} from 'react'
 import Cover from './cover/cover'
-export default class Me extends Component
+export default class Home extends Component
 {
     constructor(props)
     {
