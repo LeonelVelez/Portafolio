@@ -1,6 +1,8 @@
 #portada.container.row
 {
-    background: yellow
+    background: yellow;
+    overflow: hidden;
+    
 }
 
 .container.row img
@@ -10,8 +12,30 @@
     border-radius: 50% 50%;
     border-style: solid;
     border-color: rgba(0, 0, 0, 0);
-    
+    animation: rotat;
+    animation-duration: 1.7s;            
+}
+
+@keyframes rotat {
+    0%{
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes showWord {
+    0%{
         
+        visibility: hidden;
+        transform: translateX(1000px);
+    }
+    
+    1000%{
+        
+        visibility: visible;        
+        transform: translateX(0px);
+    }
+
+    
 }
 
 #portada.container.row {
@@ -24,6 +48,10 @@
 #portada.container.row h1
 {
     margin-left: 40px;
+    
     max-width: 800px;
     font-size: 55px;
+    animation: showWord;
+    animation-duration: 1.7s;
+    
 }

@@ -5,8 +5,19 @@ header{
     justify-content: space-between;
     width: 100%;
     position: fixed;
+    animation: showHeader;
+    animation-duration: 1.7s;
 }
 
+@keyframes showHeader
+{
+    0%{
+        transform: translateX(-1000px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
 header section, img{
     padding-right: 40px;
     padding-left: 40px;
@@ -43,6 +54,12 @@ header section, img{
 #logoHeader{
     width: 60px;
     height: 60px;        
+
+}
+
+#logoHeader:hover
+{
+    cursor: pointer;
 }
 #logoMenu p
 {
