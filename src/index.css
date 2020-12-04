@@ -12,8 +12,12 @@ code {
     monospace;
 }
 
-.container-text{
-  margin: 60px;
+.text-left{
+  margin-left: 60px;
+}
+
+.text-rigth{
+  margin-right: 60px;
 }
 
 .container{

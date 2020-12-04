@@ -1,4 +1,4 @@
-import {Component } from 'react';
+import {Component, useEffect } from 'react';
 import {Vars} from './../../vars'
 import './header.css' 
 import LogoHeader from './../../img/portada/logoHeader.svg'
@@ -18,6 +18,25 @@ export default class Header extends Component {
     console.log(this.state)
   }
 
+  OnRizable = ()=>{
+    this.CloseMenu();
+  }
+
+  OnScroll = ()=>{
+    this.CloseMenu();
+  }
+  
+  componentDidMount()
+  {
+    window.addEventListener('resize', this.OnRizable);
+    window.addEventListener('scroll', this.OnScroll)
+  }
+
+  componentWillUnmount()
+  {
+    window.removeEventListener('resize', this.OnRizable)
+    window.removeEventListener('scroll', this.OnScroll)
+  }
   render() {
 
     return (
@@ -72,7 +91,9 @@ export default class Header extends Component {
         gradosButtonMenuBottom: 'rotateZ(0deg)'        
         }        
       })      
-    }
+  }
+
+  
   
 }
  

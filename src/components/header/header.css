@@ -86,3 +86,29 @@ header section, img{
     flex-direction: column;    
     justify-content: center;           
 }
+
+
+@media screen and (max-width: 1200px) {
+    
+
+}
+@media screen and (max-width: 992px) { 
+   
+    #nav
+    {
+        display: none;
+    }
+
+    header{
+        margin-top: 40px;
+    }
+}
+
+
+@media screen and (max-width: 768px) { 
+    
+}
+
+@media screen and (max-width: 576px) { 
+    
+}

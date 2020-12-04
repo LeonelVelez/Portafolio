@@ -13,9 +13,9 @@ export default class Cover extends Component
     {
         return (
             <div className="container row" id="portada">
-                <img id="portadaImg" src={portada}  alt="Leonel Vélez"></img>
-                <section>
-                    <h1>
+                <img className="text-left" id="portadaImg" src={portada}  alt="Leonel Vélez"></img>
+                <section >
+                    <h1 className="text-rigth">
                         {Vars.ParagraphHome.title}
                     </h1>
                 </section>
