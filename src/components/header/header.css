@@ -28,7 +28,8 @@ header section, img{
     margin: 30px;
     list-style: none;
     font-size: 20px;
-    font-weight: 500;        
+    font-weight: 500;      
+    
     
 }
 #nav li:hover{
@@ -39,6 +40,7 @@ header section, img{
     
     transform-origin: right;    
     transition: 0.2s;
+    
     transform: rotateY(90deg);
     
 
@@ -53,7 +55,8 @@ header section, img{
 }
 #logoHeader{
     width: 60px;
-    height: 60px;        
+    height: 60px;      
+    
 
 }
 
@@ -85,6 +88,7 @@ header section, img{
     display: flex;    
     flex-direction: column;    
     justify-content: center;           
+    
 }
 
 
@@ -96,12 +100,23 @@ header section, img{
    
     #nav
     {
-        display: none;
+        position: fixed;
+        background: white;
+        top: 0;
+        right: 0;
+        height: 100%;
+        margin-top: 0px;
+        flex-direction: column;        
+        padding-top: 50px;
     }
-
     header{
-        margin-top: 40px;
+        padding-top: 10px;
     }
+    header section, img{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    
 }
 
 
