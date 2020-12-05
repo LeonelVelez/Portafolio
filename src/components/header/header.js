@@ -1,9 +1,11 @@
-import {Component, useEffect } from 'react';
+import React,{Component, useEffect } from 'react';
 import {Vars} from './../../vars'
 import './header.css' 
 import LogoHeader from './../../img/portada/logoHeader.svg'
+
 export default class Header extends Component {  
  menu =[];
+ tag = 'BsArrowDownShort'
  constructor(props) {
     super(props);
     this.menu =  Vars.Menu;
@@ -47,7 +49,9 @@ export default class Header extends Component {
                 <ul id="nav" className="container row"  style={{transform: this.state.Menu.gradosMenu}}>                
                   {
                     this.menu.map((obje)=>{
-                    return <li key={obje.id}>{obje.name}</li>
+                    const tagaux = this.tag;
+                    return <li key={obje.id}> <a>{obje.icon}</a> {obje.name}</li>                   
+                                                                                          
                     })                                                              
                   }                                          
                 </ul>
@@ -61,6 +65,8 @@ export default class Header extends Component {
     );
   }
 
+
+  
   onNav = ()=>{    
     if (!this.state.Menu.open)
     {

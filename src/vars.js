@@ -1,3 +1,5 @@
+import React from 'react'
+import { BsHouse, BsPerson,BsFolder,BsPlay,BsLayoutTextWindowReverse } from "react-icons/bs";
 let Names =  {
     firtsName: 'Leonel',
     secondName: 'Vélez'
@@ -7,23 +9,26 @@ let Vars = {
         id: 1,
         name : 'Home',
         path: '',
-        subMenu:[]        
+        subMenu:[],
+        icon: <BsHouse size='30px' color='black' ></BsHouse>        
     },
     {
         id: 2,
         name : 'About me',
         path: '',
-        subMenu:[] 
+        subMenu:[] ,
+        icon: <BsPerson size='30px' color='black' ></BsPerson>        
     },
     {
         id: 3,
         name : 'Proyects',
         path: '',
-        subMenu:[] 
+        subMenu:[] ,
+        icon: <BsFolder size='30px' color='black' ></BsFolder>        
     },
     {
         id: 4,
-        name : 'How Can I Help U',
+        name : 'U Need This',
         path: '',
         subMenu:[
             {
@@ -37,32 +42,34 @@ let Vars = {
                 path: '',
             },
             {
-                id: 4,
+                id: 3,
                 name : 'Backend',
                 path: '',
             },
             {
-                id: 3,
+                id: 4,
                 name : 'SEO',
                 path: '',
             },
             {
-                id: 4,
+                id: 5,
                 name : 'App Publication And admin',
                 path: '',
             },
             {
-                id: 4,
+                id: 6,
                 name : 'Web Site Admin',
                 path: '',
             },
-        ] 
+        ] ,
+        icon: <BsPlay size='30px' color='black' ></BsPlay>  
     },
     {
         id: 5,
         name : 'My Cv',
         path: '',
-        subMenu:[] 
+        subMenu:[] ,
+        icon: <BsLayoutTextWindowReverse size='30px' color='black' ></BsLayoutTextWindowReverse>        
     },
 ],
     
