@@ -8,30 +8,55 @@ export default class Header extends Component {
  tag = 'BsArrowDownShort'
  constructor(props) {
     super(props);
+    this.menuButtonTop = React.createRef();
     this.menu =  Vars.Menu;
     this.state = {
       Menu: {
         gradosMenu : 'rotateY(90)',
         open: false,
         gradosButtonMenuTop : 'rotateZ(0)',
-        gradosButtonMenuBottom : 'rotateZ(0)'        
+        gradosButtonMenuBottom : 'rotateZ(0)',
+        positionButtonMenuTop : '0px'        
       }
     }
-    console.log(this.state)
+    
   }
 
   OnRizable = ()=>{
-    this.CloseMenu();
+    if (this.state.Menu.open)
+    {
+      this.CloseMenu();
+    }
+    
   }
 
   OnScroll = ()=>{
-    this.CloseMenu();
+    if (this.state.Menu.open)
+    {
+      this.CloseMenu();
+    }
   }
   
   componentDidMount()
   {
     window.addEventListener('resize', this.OnRizable);
     window.addEventListener('scroll', this.OnScroll)
+    window.matchMedia('(max-width: 1200px)').addEventListener('change',(e)=>{
+      if(e.matches)
+      {
+        
+        this.menuButtonTop.current.style.top = '20px'
+      }
+    })
+
+    window.matchMedia('(min-width: 1200px)').addEventListener('change', (e)=>{
+      if(e.matches)
+      {
+        console.log(this.state)
+        this.menuButtonTop.current.style.top = '50px'
+      }
+    })
+    
   }
 
   componentWillUnmount()
@@ -56,8 +81,8 @@ export default class Header extends Component {
                   }                                          
                 </ul>
                 <div id="logoMenu" onClick={this.onNav}>
-                  <p style={{transform : this.state.Menu.gradosButtonMenuTop}}></p>
-                  <p style={{transform : this.state.Menu.gradosButtonMenuBottom }}></p>
+                  <p ref={this.menuButtonTop} id='logoTop' style={{transform : this.state.Menu.gradosButtonMenuTop}}></p>
+                  <p id='logoBottom'style={{transform : this.state.Menu.gradosButtonMenuBottom }}></p>
                 </div>
               </section>                            
           </header>                  
@@ -78,25 +103,48 @@ export default class Header extends Component {
   }
 
   OpenMenu = ()=>{
+    let top = '0px';
+    if(window.matchMedia('(max-width: 1200px)').matches)
+    {
+      top = '30px';
+    }else{
+      if(window.matchMedia('(min-width: 1200px)').matches)
+      {
+        top = '60px';
+      }
+    }
     this.setState({
       Menu : {
         gradosMenu: 'rotateY(0deg)',
         open : true,
-        gradosButtonMenuTop: 'rotateZ(360deg)',
-        gradosButtonMenuBottom: 'rotateZ(-360deg)'        
+        gradosButtonMenuTop: 'rotateZ(405deg)',
+        gradosButtonMenuBottom: 'rotateZ(-405deg)'        ,
+        positionButtonMenuTop: top
       }        
-    })      
+    }, ()=> this.menuButtonTop.current.style.top = this.state.Menu.positionButtonMenuTop)      
   }
 
   CloseMenu = ()=>{
+    
+    let top = '0px';
+    if(window.matchMedia('(max-width: 1200px)').matches)
+    {
+      top = '20px';
+    }else{
+      if(window.matchMedia('(min-width: 1200px)').matches)
+      {
+        top = '50px';
+      }
+    }
     this.setState({
       Menu : {
         gradosMenu: 'rotateY(90deg)',
         open : false,
         gradosButtonMenuTop: 'rotateZ(0deg)',
-        gradosButtonMenuBottom: 'rotateZ(0deg)'        
+        gradosButtonMenuBottom: 'rotateZ(0deg)',
+        positionButtonMenuTop: top        
         }        
-      })      
+      }, ()=> this.menuButtonTop.current.style.top = this.state.Menu.positionButtonMenuTop)      
   }
 
   
