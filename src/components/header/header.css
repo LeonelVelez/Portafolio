@@ -20,7 +20,7 @@ header{
     }
 }
 header section, img{
-    padding-right: 40px;
+    padding-right: 40px;    
     padding-left: 40px;
 }
 
@@ -62,14 +62,24 @@ header section, img{
 
 #logoMenu:hover{
     
-    cursor: pointer;
+    cursor: pointer;    
+
+}
+
+#logoMenu:hover #logoTop{
     
+    transform: rotateZ(360deg);
 
 
 }
+
+#logoMenu:hover #logoBottom
+{
+    transform: rotateZ(360deg);
+}
 #logoHeader{
-    width: 60px;
-    height: 60px;      
+    width: 50px;
+    height: 50px;      
     
 
 }
@@ -77,6 +87,7 @@ header section, img{
 #logoHeader:hover
 {
     cursor: pointer;
+    
 }
 #logoMenu p
 {
@@ -92,18 +103,17 @@ header section, img{
     right: 1px;
 }
 
+
 #logoTop
 {
     top: 50px;
-    border-color: red;
-    background: red;
+    
 }
 
 #logoBottom
 {
     top:60px;
-    border-color: blue;
-    background: blue;
+    
 }
 
 #logoMenu 
@@ -111,9 +121,12 @@ header section, img{
     border: 0px;
     padding: 0px;
     display: flex;    
+    width: 43px;
     flex-direction: column;    
     justify-content: center;           
     position: relative;
+    right: 1px;
+    
     
 }
 
@@ -132,6 +145,7 @@ header section, img{
     }
     header{
         padding-top: 10px;
+        align-items: flex-start;
     }
     header section, img{
         padding-right: 20px;
@@ -160,6 +174,18 @@ header section, img{
         align-items: flex-start;
     }
         
+
+    #logoMenu 
+    {
+        width: 43px;
+        height: 90px;
+    }
+    header section, img{
+        
+        padding-top: 10px;
+                
+    }
+
 
 }
 @media screen and (max-width: 992px) { 
