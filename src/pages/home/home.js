@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import Cover from './cover/cover'
+import About from './about/about'
 export default class Home extends Component
 {
     constructor(props)
@@ -11,7 +12,8 @@ export default class Home extends Component
     {
         return (
             <div>
-                <Cover></Cover>                   
+                <Cover></Cover>               
+                <About></About>    
             </div>
         );
     }
