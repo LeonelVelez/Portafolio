@@ -4,13 +4,13 @@ import './header.css'
 import LogoHeader from './../../img/portada/logoHeader.svg'
 
 export default class Header extends Component {  
- menu =[];
+ 
  tag = 'BsArrowDownShort'
  constructor(props) {
     super(props);
     this.menuButtonTop = React.createRef();
     
-    this.menu =  Vars.Menu;
+    
     this.state = {
       menu: {
         gradosMenu : 'rotateY(90)',
@@ -19,7 +19,8 @@ export default class Header extends Component {
         gradosButtonMenuBottom : 'rotateZ(0)',
         positionButtonMenuTop : '0px'        
       },
-      scroll : this.props.scroll
+      scroll : this.props.scroll,
+      itemsMenu : Vars.Menu
     }
         
   }
@@ -49,8 +50,16 @@ export default class Header extends Component {
   
   componentDidUpdate = (newprop)=>
   {    
-        
+     
+      
      if(newprop.scroll.scrollY !== this.props.scroll.scrollY)
+     {
+        if(this.state.menu.open) 
+        {
+          this.CloseMenu();
+        }
+     }
+     if(newprop.scroll.width !== this.props.scroll.width)
      {
         if(this.state.menu.open) 
         {
@@ -69,7 +78,7 @@ export default class Header extends Component {
               <section id="navBar" className="container row">
                 <ul id="nav" className="container row"  style={{transform: this.state.menu.gradosMenu}}>                
                   {
-                    this.menu.map((obje)=>{
+                    this.state.itemsMenu.map((obje)=>{
                     const tagaux = this.tag;
                     return <li key={obje.id}> <a>{obje.icon}</a> {obje.name}</li>                   
                                                                                           

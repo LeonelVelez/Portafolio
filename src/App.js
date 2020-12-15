@@ -11,6 +11,8 @@ class App extends Component {
       scroll : {
         scrollY:0,
         scrollX:0,
+        height:0,
+        width:0
       }
     }
   }
@@ -25,14 +27,35 @@ class App extends Component {
 
   componentDidMount()
   {
+    this.setState({         
+      scroll : {
+        height:window.innerHeight,
+        width:window.innerWidth,
+        scrollX : window.scrollX,
+        scrollY : window.scrollY,        
+      }             
+    })     
     window.addEventListener('scroll', ()=>{            
-      this.setState({
+      this.setState({         
         scroll : {
+          ...this.state.scroll,
           scrollX : window.scrollX,
-          scrollY : window.scrollY,
-        }
+          scrollY : window.scrollY,        
+        }       
+        
       })     
     })
+
+    window.addEventListener('resize', ()=>{            
+      this.setState({         
+        scroll : {
+          ...this.state.scroll,
+          height : window.innerHeight,
+          width : window.innerWidth,        
+        }               
+      })     
+    })
+      
   }
 
   
