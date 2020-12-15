@@ -56,14 +56,14 @@ export default class Header extends Component {
      {
         if(this.state.menu.open) 
         {
-          this.CloseMenu();
+          this.closeMenu();
         }
      }
      if(newprop.scroll.width !== this.props.scroll.width)
      {
         if(this.state.menu.open) 
         {
-          this.CloseMenu();
+          this.closeMenu();
         }
      }
      
@@ -85,7 +85,7 @@ export default class Header extends Component {
                     })                                                              
                   }                                          
                 </ul>
-                <div id="logoMenu" onClick={this.onNav}>
+                <div id="logoMenu" onClick={this.actionMenu}>
                   <p ref={this.menuButtonTop} id='logoTop' style={{transform : this.state.menu.gradosButtonMenuTop}}></p>
                   <p id='logoBottom'style={{transform : this.state.menu.gradosButtonMenuBottom }}></p>
                 </div>
@@ -97,18 +97,18 @@ export default class Header extends Component {
 
 
   
-  onNav = ()=>{    
+  actionMenu = ()=>{    
     if (!this.state.menu.open)
     {
       
-      this.OpenMenu()  
+      this.openMenu()  
     }else{
-       this.CloseMenu()     
+       this.closeMenu()     
     }  
 
   }
 
-  OpenMenu = ()=>{
+  openMenu = ()=>{
     let top = '0px';
     if(window.matchMedia('(max-width: 1200px)').matches)
     {
@@ -134,7 +134,7 @@ export default class Header extends Component {
     })      
   }
 
-  CloseMenu = ()=>{
+  closeMenu = ()=>{
     
     let top = '0px';
     if(window.matchMedia('(max-width: 1200px)').matches)
