@@ -19,7 +19,7 @@ export default class Header extends Component {
         gradosButtonMenuBottom : 'rotateZ(0)',
         positionButtonMenuTop : '0px'        
       },
-      scroll : this.props.scroll,
+      documentInfo : this.props.documentInfo,
       itemsMenu : Vars.Menu
     }
         
@@ -52,14 +52,14 @@ export default class Header extends Component {
   {    
      
       
-     if(newprop.scroll.scrollY !== this.props.scroll.scrollY)
+     if(newprop.documentInfo.scrollY !== this.props.documentInfo.scrollY)
      {
         if(this.state.menu.open) 
         {
           this.closeMenu();
         }
      }
-     if(newprop.scroll.width !== this.props.scroll.width)
+     if(newprop.documentInfo.width !== this.props.documentInfo.width)
      {
         if(this.state.menu.open) 
         {
@@ -78,8 +78,7 @@ export default class Header extends Component {
               <section id="navBar" className="container row">
                 <ul id="nav" className="container row"  style={{transform: this.state.menu.gradosMenu}}>                
                   {
-                    this.state.itemsMenu.map((obje)=>{
-                    const tagaux = this.tag;
+                    this.state.itemsMenu.map((obje)=>{                    
                     return <li key={obje.id}> <a>{obje.icon}</a> {obje.name}</li>                   
                                                                                           
                     })                                                              

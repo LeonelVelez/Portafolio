@@ -3,7 +3,7 @@
     justify-content: center;
     text-align: center;
     
-    background-image:  linear-gradient( rgba(163, 163, 63, 0.2), rgb(255, 255, 0, 0.2)), url('./../../../img/tittleAboutMe.jpg');
+    
     background-position: center;
     background-size: cover;
     padding: 140px;

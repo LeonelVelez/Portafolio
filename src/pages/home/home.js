@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Cover from './cover/cover'
-import About from './about/about'
+import Title from './../../components/title/title'
+import imageAbout from '././../../img/tittleAboutMe.jpg'
 export default class Home extends Component
 {
     constructor(props)
@@ -13,8 +14,10 @@ export default class Home extends Component
         return (
             <div>
                 <Cover></Cover>               
-                <About></About>    
+                <Title image={imageAbout} title='ABOUT ME' ></Title>
             </div>
         );
     }
+
+    
 }

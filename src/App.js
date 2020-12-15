@@ -8,7 +8,7 @@ class App extends Component {
     
     super(props)    
     this.state = {
-      scroll : {
+      documentInfo : {
         scrollY:0,
         scrollX:0,
         height:0,
@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <section>
-        <Header scroll={this.state.scroll} ></Header>       
+        <Header documentInfo={this.state.documentInfo} ></Header>       
         <Home></Home>
       </section>      
     );
@@ -28,39 +28,30 @@ class App extends Component {
   componentDidMount()
   {
     this.setState({         
-      scroll : {
-        height:window.innerHeight,
-        width:window.innerWidth,
-        scrollX : window.scrollX,
-        scrollY : window.scrollY,        
-      }             
+      documentInfo : this.getInformationDocument()             
     })     
     window.addEventListener('scroll', ()=>{            
       this.setState({         
-        scroll : {
-          ...this.state.scroll,
-          scrollX : window.scrollX,
-          scrollY : window.scrollY,        
-        }       
+        documentInfo : this.getInformationDocument()                    
         
       })     
     })
 
     window.addEventListener('resize', ()=>{            
       this.setState({         
-        scroll : {
-          ...this.state.scroll,
-          height : window.innerHeight,
-          width : window.innerWidth,        
-        }               
+        documentInfo : this.getInformationDocument()                            
       })     
-    })
-      
+    })      
   }
 
-  
+  getInformationDocument= ()=>{
+    return {
+        height:window.innerHeight,
+        width:window.innerWidth,
+        scrollX : window.scrollX,
+        scrollY : window.scrollY,        
+    }
+  }  
 }
-
-
  
 export default App;
