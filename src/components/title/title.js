@@ -11,7 +11,7 @@ export default class Title extends Component
     render()
     {
         return (<> 
-            <div id='about' className='container row' 
+            <div  className='container row title' 
                 style={{backgroundImage:   `linear-gradient( rgba(163, 163, 63, 0.2), rgb(255, 255, 0, 0.2)), url(${this.props.image})` }}
             >                 
                 <h2>{this.props.title}</h2>

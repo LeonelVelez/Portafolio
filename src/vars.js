@@ -73,9 +73,9 @@ let Vars = {
     },
 ],
     
-    ParagraphHome:{
-        title: `Hi, my name is ${Names.firtsName}. I'm Software Developer, Back, Front, Philanthropist & Playboy`
-    }
+ParagraphHome:{
+    title: `Hi, my name is ${Names.firtsName}. I'm Software Developer, Back, Front, Philanthropist & Playboy`
+}
 }
 export default Vars;
 export {Names, Vars} ;

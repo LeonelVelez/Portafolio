@@ -2,6 +2,7 @@ import {Component} from 'react'
 import Cover from './cover/cover'
 import Title from './../../components/title/title'
 import imageAbout from '././../../img/tittleAboutMe.jpg'
+import {Vars} from './../../vars'
 export default class Home extends Component
 {
     constructor(props)
@@ -14,7 +15,7 @@ export default class Home extends Component
         return (
             <div>
                 <Cover></Cover>               
-                <Title image={imageAbout} title='ABOUT ME' ></Title>
+                <Title image={imageAbout} title={Vars.Menu[1].name.toUpperCase()} ></Title>
             </div>
         );
     }
