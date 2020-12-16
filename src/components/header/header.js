@@ -49,24 +49,14 @@ export default class Header extends Component {
 
   
   componentDidUpdate = (newprop)=>
-  {    
-     
-      
-     if(newprop.documentInfo.scrollY !== this.props.documentInfo.scrollY)
+  {               
+     if(newprop.documentInfo !== this.props.documentInfo)
      {
         if(this.state.menu.open) 
         {
           this.closeMenu();
         }
-     }
-     if(newprop.documentInfo.width !== this.props.documentInfo.width)
-     {
-        if(this.state.menu.open) 
-        {
-          this.closeMenu();
-        }
-     }
-     
+     }          
   }
   
   render() {
