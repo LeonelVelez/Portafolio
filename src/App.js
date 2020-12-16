@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <section>
         <Header documentInfo={this.state.documentInfo} ></Header>       
-        <Home></Home>
+        <Home documentInfo={this.state.documentInfo}></Home>
       </section>      
     );
   }

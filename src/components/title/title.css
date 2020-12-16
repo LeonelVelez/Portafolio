@@ -6,7 +6,8 @@
     
     background-position: center;
     background-size: cover;
-    padding: 140px;
+    padding: 140px;    
+    transition-duration: 0.5s;
 }
 
 .title h2{
