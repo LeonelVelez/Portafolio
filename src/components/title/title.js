@@ -1,4 +1,5 @@
 import React, { Component} from 'react'
+import ViewPort from '../../classes/viewPort';
 import './title.css'
 export default class Title extends Component
 {
@@ -34,11 +35,13 @@ export default class Title extends Component
     }
     componentDidUpdate(newprops)
     {
+        
         if(newprops.documentInfo !== this.props.documentInfo)       
         {
             
             if(this.title.current.getBoundingClientRect().top <= 0 && this.title.current.getBoundingClientRect().bottom >= 0)
-            {                                
+            {        
+                this.props.onFocusViewPort({nameComponent: 'titleAbout', colorHeader:'white'});                        
                 const Card = this.title.current.getBoundingClientRect().height
                 const valueLuminity = Number((this.title.current.getBoundingClientRect().top * -1 / Card).toFixed(2));
                 this.setState({
@@ -48,4 +51,7 @@ export default class Title extends Component
             }         
         }
     }
+    
+
+    
 }

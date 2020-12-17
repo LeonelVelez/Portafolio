@@ -7,20 +7,22 @@ class App extends Component {
   {
     
     super(props)    
+    this.onFocusViewPort = this.onFocusViewPort.bind(this)
     this.state = {
       documentInfo : {
         scrollY:0,
         scrollX:0,
         height:0,
         width:0
-      }
+      },
+      colorIconsHeader : 'black'
     }
   }
   render() {
     return (
       <section>
-        <Header documentInfo={this.state.documentInfo} ></Header>       
-        <Home documentInfo={this.state.documentInfo}></Home>
+        <Header documentInfo={this.state.documentInfo} colorIcons={this.state.colorIconsHeader}></Header>       
+        <Home documentInfo={this.state.documentInfo} onFocusViewPort={this.onFocusViewPort}  ></Home>
       </section>      
     );
   }
@@ -52,6 +54,13 @@ class App extends Component {
         scrollY : window.scrollY,        
     }
   }  
+
+  onFocusViewPort = (e)=>{
+    this.setState({
+      ...this.state.documentInfo,
+      colorIconsHeader : e.colorHeader
+    })
+  }
 }
  
 export default App;

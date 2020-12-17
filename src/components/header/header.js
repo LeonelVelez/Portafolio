@@ -17,7 +17,8 @@ export default class Header extends Component {
         open: false,
         gradosButtonMenuTop : 'rotateZ(0)',
         gradosButtonMenuBottom : 'rotateZ(0)',
-        positionButtonMenuTop : '0px'        
+        positionButtonMenuTop : '0px' ,
+        colorIcons: 'black'       
       },
       documentInfo : this.props.documentInfo,
       itemsMenu : Vars.Menu
@@ -56,7 +57,19 @@ export default class Header extends Component {
         {
           this.closeMenu();
         }
-     }          
+     }
+     
+     if(newprop.colorIcons !== this.props.colorIcons)          
+     {
+       
+       this.setState(
+         {
+          ...this.state,
+          menu: {...this.state.menu, colorIcons: this.props.colorIcons}          
+         },()=>console.log(this.state)
+       )
+       
+     }
   }
   
   render() {
@@ -64,7 +77,7 @@ export default class Header extends Component {
     return (
       <div>          
           <header >              
-              <LogoHeader id='logoHeader' ></LogoHeader>
+              <LogoHeader id='logoHeader' fill={this.state.menu.colorIcons} stroke={this.state.menu.colorIcons} ></LogoHeader>
               <section id="navBar" className="container row">
                 <ul id="nav" className="container row"  style={{transform: this.state.menu.gradosMenu}}>                
                   {
@@ -75,8 +88,8 @@ export default class Header extends Component {
                   }                                          
                 </ul>
                 <div id="logoMenu" onClick={this.actionMenu}>
-                  <p ref={this.menuButtonTop} id='logoTop' style={{transform : this.state.menu.gradosButtonMenuTop}}></p>
-                  <p id='logoBottom'style={{transform : this.state.menu.gradosButtonMenuBottom }}></p>
+                  <p ref={this.menuButtonTop} id='logoTop' style={{transform : this.state.menu.gradosButtonMenuTop, borderColor:this.state.menu.colorIcons, backgroundColor:this.state.menu.colorIcons}}></p>
+                  <p id='logoBottom'style={{transform : this.state.menu.gradosButtonMenuBottom, borderColor:this.state.menu.colorIcons, backgroundColor:this.state.menu.colorIcons }}></p>
                 </div>
               </section>                            
           </header>                  
@@ -110,11 +123,13 @@ export default class Header extends Component {
     }
     this.setState({
       menu : {
+        ...this.state.menu,
         gradosMenu: 'rotateY(0deg)',
         open : true,
         gradosButtonMenuTop: 'rotateZ(405deg)',
         gradosButtonMenuBottom: 'rotateZ(-405deg)'        ,
         positionButtonMenuTop: top
+        
       }        
     }, ()=> {
       
@@ -137,6 +152,7 @@ export default class Header extends Component {
     }
     this.setState({
       menu : {
+        ...this.state.menu,
         gradosMenu: 'rotateY(90deg)',
         open : false,
         gradosButtonMenuTop: 'rotateZ(0deg)',
