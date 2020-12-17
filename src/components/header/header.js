@@ -1,7 +1,7 @@
 import React,{Component, useEffect } from 'react';
 import {Vars} from './../../vars'
 import './header.css' 
-import LogoHeader from './../../img/portada/logoHeader.svg'
+import {ReactComponent as LogoHeader} from './../../img/portada/logoHeader.svg'
 
 export default class Header extends Component {  
  
@@ -29,7 +29,7 @@ export default class Header extends Component {
   componentDidMount()
   {
     
-    window.matchMedia('(max-width: 1200px)').addEventListener('change',(e)=>{
+    window.matchMedia('(max-width: 1320px)').addEventListener('change',(e)=>{
       if(e.matches)
       {
         
@@ -37,7 +37,7 @@ export default class Header extends Component {
       }
     })
 
-    window.matchMedia('(min-width: 1200px)').addEventListener('change', (e)=>{
+    window.matchMedia('(min-width: 1320px)').addEventListener('change', (e)=>{
       if(e.matches)
       {
         
@@ -64,7 +64,7 @@ export default class Header extends Component {
     return (
       <div>          
           <header >              
-              <img id="logoHeader"  src={LogoHeader} alt="logo of Leonel Velez" ></img>              
+              <LogoHeader id='logoHeader' ></LogoHeader>
               <section id="navBar" className="container row">
                 <ul id="nav" className="container row"  style={{transform: this.state.menu.gradosMenu}}>                
                   {
@@ -99,11 +99,11 @@ export default class Header extends Component {
 
   openMenu = ()=>{
     let top = '0px';
-    if(window.matchMedia('(max-width: 1200px)').matches)
+    if(window.matchMedia('(max-width: 1320px)').matches)
     {
       top = '30px';
     }else{
-      if(window.matchMedia('(min-width: 1200px)').matches)
+      if(window.matchMedia('(min-width: 1320px)').matches)
       {
         top = '60px';
       }
@@ -126,11 +126,11 @@ export default class Header extends Component {
   closeMenu = ()=>{
     
     let top = '0px';
-    if(window.matchMedia('(max-width: 1200px)').matches)
+    if(window.matchMedia('(max-width: 1320px)').matches)
     {
       top = '20px';
     }else{
-      if(window.matchMedia('(min-width: 1200px)').matches)
+      if(window.matchMedia('(min-width: 1320px)').matches)
       {
         top = '50px';
       }

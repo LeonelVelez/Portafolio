@@ -19,9 +19,10 @@ header{
         transform: translateX(0px);
     }
 }
-header section, img{
+header section, #logoHeader{
     padding-right: 40px;    
     padding-left: 40px;
+    
 }
 
 
@@ -83,6 +84,7 @@ header section, img{
     width: 50px;
     height: 50px;      
     
+    
 
 }
 
@@ -128,12 +130,13 @@ header section, img{
     justify-content: center;           
     position: relative;
     right: 1px;
+    background: red;
     
     
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1320px) {
     #nav
     {
         position: fixed;
@@ -149,9 +152,10 @@ header section, img{
         padding-top: 10px;
         align-items: flex-start;
     }
-    header section, img{
+    header section, #logoHeader{
         padding-right: 20px;
         padding-left: 20px;
+        padding-top: 10px;
     }
 
     #nav li{
@@ -183,11 +187,7 @@ header section, img{
         width: 43px;
         height: 90px;
     }
-    header section, img{
-        
-        padding-top: 10px;
-                
-    }
+    
 
 
 }
