@@ -18,7 +18,7 @@ import React, {Component} from 'react'
             {
                 if(this.props.references.current.getBoundingClientRect().top <= 0 && this.props.references.current.getBoundingClientRect().bottom >= 0)
                 {
-                    this.props.onFocusViewPort();                        
+                    this.props.onFocusViewPort({type:this.props.type});                        
                 }
             }            
         }
