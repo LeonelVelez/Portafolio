@@ -18,7 +18,7 @@ export default class Header extends Component {
         gradosButtonMenuTop : 'rotateZ(0)',
         gradosButtonMenuBottom : 'rotateZ(0)',
         positionButtonMenuTop : '0px' ,
-        colorIcons: 'black'       
+        colorIcons: {menu:'black', nav:'black'}      
       },
       documentInfo : this.props.documentInfo,
       itemsMenu : Vars.Menu
@@ -59,13 +59,13 @@ export default class Header extends Component {
         }
      }
      
-     if(newprop.colorIcons !== this.props.colorIcons)          
+     if(newprop.colorMenu !== this.props.colorMenu || newprop.colorNav !== this.props.colorNav)          
      {
        
        this.setState(
          {
           ...this.state,
-          menu: {...this.state.menu, colorIcons: this.props.colorIcons}          
+          menu: {...this.state.menu, colorIcons: {menu:this.props.colorMenu, nav:this.props.colorNav}}          
          },()=>console.log(this.state)
        )
        
@@ -77,7 +77,7 @@ export default class Header extends Component {
     return (
       <div>          
           <header >              
-              <LogoHeader id='logoHeader' fill={this.state.menu.colorIcons} stroke={this.state.menu.colorIcons} ></LogoHeader>
+              <LogoHeader id='logoHeader' fill={this.state.menu.colorIcons.nav} stroke={this.state.menu.colorIcons.nav} ></LogoHeader>
               <section id="navBar" className="container row">
                 <ul id="nav" className="container row"  style={{transform: this.state.menu.gradosMenu}}>                
                   {
@@ -88,8 +88,8 @@ export default class Header extends Component {
                   }                                          
                 </ul>
                 <div id="logoMenu" onClick={this.actionMenu}>
-                  <p ref={this.menuButtonTop} id='logoTop' style={{transform : this.state.menu.gradosButtonMenuTop, borderColor:this.state.menu.colorIcons, backgroundColor:this.state.menu.colorIcons}}></p>
-                  <p id='logoBottom'style={{transform : this.state.menu.gradosButtonMenuBottom, borderColor:this.state.menu.colorIcons, backgroundColor:this.state.menu.colorIcons }}></p>
+                  <p ref={this.menuButtonTop} id='logoTop' style={{transform : this.state.menu.gradosButtonMenuTop, borderColor:this.state.menu.colorIcons.menu, backgroundColor:this.state.menu.colorIcons.menu}}></p>
+                  <p id='logoBottom'style={{transform : this.state.menu.gradosButtonMenuBottom, borderColor:this.state.menu.colorIcons.menu, backgroundColor:this.state.menu.colorIcons.menu }}></p>
                 </div>
               </section>                            
           </header>                  

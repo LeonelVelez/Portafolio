@@ -39,7 +39,7 @@ export default class Title extends Component
 
     onFocusViewPort = (e)=>{
         
-        this.props.onFocusViewPort({type: e.type, colorHeader:'white'});                        
+        this.props.onFocusViewPort({colorHeader:{menu:'white', nav:'white'}, type:e.type})
         const Card = this.title.current.getBoundingClientRect().height
         const valueLuminity = Number((this.title.current.getBoundingClientRect().top * -1 / Card).toFixed(2));
         this.setState({

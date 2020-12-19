@@ -38,6 +38,6 @@ export default class Cover extends Component
         );
     }
     onFocusViewPort = (e)=>{
-        this.props.onFocusViewPort({colorHeader:'black', type:e.type})
+        this.props.onFocusViewPort({colorHeader:{menu:'black', nav:'black'}, type:e.type})
     }
 }

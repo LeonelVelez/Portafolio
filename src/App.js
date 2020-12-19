@@ -15,13 +15,13 @@ class App extends Component {
         height:0,
         width:0
       },
-      colorIconsHeader : 'black'
+      colorIconsHeader : {menu:'black', nav:'black'}
     }
   }
   render() {
     return (
       <section>
-        <Header documentInfo={this.state.documentInfo} colorIcons={this.state.colorIconsHeader}></Header>       
+        <Header documentInfo={this.state.documentInfo} colorMenu={this.state.colorIconsHeader.menu} colorNav={this.state.colorIconsHeader.nav}></Header>       
         <Home documentInfo={this.state.documentInfo} onFocusViewPort={this.onFocusViewPort}  ></Home>
       </section>      
     );
@@ -58,7 +58,7 @@ class App extends Component {
   onFocusViewPort = (e)=>{
     this.setState({
       ...this.state.documentInfo,
-      colorIconsHeader : e.colorHeader
+      colorIconsHeader : {menu:e.colorHeader.menu, nav:e.colorHeader.nav}
     })
   }
 }
