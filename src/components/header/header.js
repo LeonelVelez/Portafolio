@@ -112,12 +112,15 @@ export default class Header extends Component {
 
   openMenu = ()=>{
     let top = '0px';
+    let colorMenu = 'black';
     if(window.matchMedia('(max-width: 1320px)').matches)
     {
       top = '30px';
+      
     }else{
       if(window.matchMedia('(min-width: 1320px)').matches)
       {
+        colorMenu = this.state.menu.colorIcons.menu
         top = '60px';
       }
     }
@@ -128,7 +131,8 @@ export default class Header extends Component {
         open : true,
         gradosButtonMenuTop: 'rotateZ(405deg)',
         gradosButtonMenuBottom: 'rotateZ(-405deg)'        ,
-        positionButtonMenuTop: top
+        positionButtonMenuTop: top,
+        colorIcons :{...this.state.menu.colorIcons, menu:colorMenu}
         
       }        
     }, ()=> {
@@ -157,7 +161,8 @@ export default class Header extends Component {
         open : false,
         gradosButtonMenuTop: 'rotateZ(0deg)',
         gradosButtonMenuBottom: 'rotateZ(0deg)',
-        positionButtonMenuTop: top        
+        positionButtonMenuTop: top,
+        colorIcons :{...this.state.menu.colorIcons, menu:this.props.colorMenu}        
         }        
       }, ()=> {
         this.menuButtonTop.current.style.top = this.state.menu.positionButtonMenuTop                      
