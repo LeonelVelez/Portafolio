@@ -13,6 +13,7 @@ export default class Cover extends Component
         super(props)
         this.cover = React.createRef()
         this.titleCover = React.createRef()
+        this.imageCover = React.createRef()
         this.onFocusViewPort = this.onFocusViewPort.bind(this)
 
     }
@@ -22,7 +23,7 @@ export default class Cover extends Component
         return (
             <div className="container column" id="cover" ref={this.cover}>
                 <div className="container row" id="body" >
-                    <img className="text-left" id="portadaImg" src={portada}  alt="Leonel Vélez"></img>
+                    <img ref={this.imageCover} className="text-left" id="portadaImg" src={portada}  alt="Leonel Vélez"></img>
                     <section >
                         <h1 className="text-rigth" ref={this.titleCover}>
                             {Vars.ParagraphHome.title}
@@ -36,6 +37,7 @@ export default class Cover extends Component
             </div>                
                 <ContainerViewPort type={'cover'} references={this.cover} documentInfo={this.props.documentInfo} onFocusViewPort={this.onFocusViewPort} ></ContainerViewPort>
                 <ContainerViewPort type={'titleCover'} references={this.titleCover} documentInfo={this.props.documentInfo} onFocusViewPort={this.onFocusViewPort} ></ContainerViewPort>
+                <ContainerViewPort type={'imageCover'} references={this.imageCover} documentInfo={this.props.documentInfo} onFocusViewPort={this.onFocusViewPort} ></ContainerViewPort>
             </div>
         );
     }
@@ -44,13 +46,22 @@ export default class Cover extends Component
         {
             this.props.onFocusViewPort({colorHeader:{menu:'black', nav:'black'}, type:e.type})
         }else{
-            if(window.matchMedia('(max-width:900px)').matches)
+            if(e.type === 'titleCover')
             {
+                if(window.matchMedia('(max-width:900px)').matches)
+                {
+                    
+                    this.props.onFocusViewPort({colorHeader:{menu:'white', nav:'white'}, type:e.type})
+                }
+
+            }else{
                 
-                this.props.onFocusViewPort({colorHeader:{menu:'white', nav:'white'}, type:e.type})
-            }
-            
-            
+                if(window.matchMedia('(max-width:400px)').matches)
+                {
+                    
+                    this.props.onFocusViewPort({colorHeader:{menu:'white', nav:'white'}, type:e.type})
+                }            
+            }                        
         }
         
     }
