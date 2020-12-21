@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/header/header'
 import Home from './pages/home/home';
 
@@ -22,7 +23,13 @@ class App extends Component {
     return (
       <section>
         <Header documentInfo={this.state.documentInfo} colorMenu={this.state.colorIconsHeader.menu} colorNav={this.state.colorIconsHeader.nav}></Header>       
-        <Home documentInfo={this.state.documentInfo} onFocusViewPort={this.onFocusViewPort}  ></Home>
+        <BrowserRouter>
+          <Switch>            
+            <Route exact path='/' render={(props)=>(this.getPage('Home', props))}></Route>
+            <Route exact path='/home' render={(props)=>(this.getPage('Home', props))}></Route>
+          </Switch>
+        </BrowserRouter>
+        
       </section>      
     );
   }
@@ -60,6 +67,20 @@ class App extends Component {
       ...this.state.documentInfo,
       colorIconsHeader : {menu:e.colorHeader.menu, nav:e.colorHeader.nav}
     })
+  }
+
+  getPage = (page,props)=>{
+    var pageSolicitada;
+
+    switch (page)
+    {
+      case 'Home':
+        pageSolicitada = <Home {...props} documentInfo={this.state.documentInfo} onFocusViewPort={this.onFocusViewPort}  ></Home>
+        break;
+    }
+
+    return pageSolicitada
+
   }
 }
  
