@@ -20,7 +20,7 @@ export default class Title extends Component
     {
         return (<>         
             <div ref={this.title} className='container row title' 
-                style={{backgroundImage:   `linear-gradient( rgba(163, 163, 63, ${this.state.luminity}), rgb(255, 255, 0, ${this.state.luminity})), url(${this.props.image})` }}>                 
+                style={{backgroundImage:   `linear-gradient( rgba(255, 255, 0, ${this.state.luminity}), rgb(255, 255, 0, ${this.state.luminity})), url(${this.props.image})` }}>                 
                 <h2>{this.props.title}</h2>
                 <ContainerViewPort references={this.title} documentInfo={this.props.documentInfo} onFocusViewPort={this.onFocusViewPort}></ContainerViewPort>
             </div>            
@@ -40,7 +40,7 @@ export default class Title extends Component
     onFocusViewPort = (e)=>{
         
         this.props.onFocusViewPort({colorHeader:{menu:'white', nav:'white'}, type:e.type})
-        const Card = Number((this.title.current.getBoundingClientRect().height * 0.68)).toFixed(2);        
+        const Card = Number((this.title.current.getBoundingClientRect().height * 0.80)).toFixed(2);        
         const valueLuminity = Number((this.title.current.getBoundingClientRect().top * -1 /Card ).toFixed(2));
         this.setState({
             ...this.state,
