@@ -10,6 +10,11 @@ header{
     z-index: 1;
 }
 
+.items
+{
+    text-decoration: none;
+    color: black;
+}
 @keyframes showHeader
 {
     0%{
@@ -26,7 +31,9 @@ header section, #logoHeader{
     
 }
 
-
+#nav Link{
+    text-decoration: none;
+}
 #nav li{
     
     margin: 30px;
@@ -130,6 +137,7 @@ header section, #logoHeader{
     justify-content: center;           
     position: relative;
     right: 1px;        
+    
     
 }
 

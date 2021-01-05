@@ -8,28 +8,22 @@ let Vars = {
     Menu : [{
         id: 1,
         name : 'Home',
-        path: '',
+        path: '/home',
+        
         subMenu:[],
         icon: <BsHouse size='30px' color='black' ></BsHouse>        
-    },
-    {
-        id: 2,
-        name : 'About me',
-        path: '',
-        subMenu:[] ,
-        icon: <BsPerson size='30px' color='black' ></BsPerson>        
-    },
+    },    
     {
         id: 3,
         name : 'Proyects',
-        path: '',
+        path: '/proyects',        
         subMenu:[] ,
         icon: <BsFolder size='30px' color='black' ></BsFolder>        
     },
     {
         id: 4,
         name : 'U Need This',
-        path: '',
+        path: '/services',        
         subMenu:[
             {
                 id: 1,
@@ -67,7 +61,7 @@ let Vars = {
     {
         id: 5,
         name : 'My Cv',
-        path: '',
+        path: 'cv',
         subMenu:[] ,
         icon: <BsLayoutTextWindowReverse size='30px' color='black' ></BsLayoutTextWindowReverse>        
     },

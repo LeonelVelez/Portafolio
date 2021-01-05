@@ -2,6 +2,7 @@ import React,{Component, useEffect } from 'react';
 import {Vars} from './../../vars'
 import './header.css' 
 import {ReactComponent as LogoHeader} from './../../img/portada/logoHeader.svg'
+import { Link } from 'react-router-dom';
 
 export default class Header extends Component {  
  
@@ -77,13 +78,15 @@ export default class Header extends Component {
     return (
       <div>          
           <header >              
-              <LogoHeader id='logoHeader' fill={this.state.menu.colorIcons.nav} stroke={this.state.menu.colorIcons.nav} ></LogoHeader>
+              <Link to='/home' onClick={()=>{this.onMovePath('/home')}}><LogoHeader  id='logoHeader' fill={this.state.menu.colorIcons.nav} stroke={this.state.menu.colorIcons.nav} ></LogoHeader></Link>
+              
               <section id="navBar" className="container row">
                 <ul id="nav" className="container row"  style={{transform: this.state.menu.gradosMenu}}>                
                   {
                     this.state.itemsMenu.map((obje)=>{                    
-                    return <li key={obje.id}> <a>{obje.icon}</a> {obje.name}</li>                   
-                                                                                          
+                    return (<Link to={obje.path}  key={obje.id} className='items'   >
+                          <li onClick={()=>{this.onMovePath(obje.path)}} >   <a>{obje.icon}</a> {obje.name}</li>
+                       </Link>)                                                                                                            
                     })                                                              
                   }                                          
                 </ul>
@@ -168,6 +171,16 @@ export default class Header extends Component {
         this.menuButtonTop.current.style.top = this.state.menu.positionButtonMenuTop                      
       })      
   }
+
+  onMovePath = (e)=>{
+    this.closeMenu()
+    window.scroll({
+      top:0,
+      left:0,
+      behavior:'smooth'
+    })    
+  }
+  
 
   
   

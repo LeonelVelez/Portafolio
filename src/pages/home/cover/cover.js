@@ -30,9 +30,9 @@ export default class Cover extends Component
                         </h1>
                     </section>
                 </div>                
-            <div id="footer">
+            <div id="footer" onClick={this.goToLocalComponent}>
                 
-                <BsArrowDownShort color="black" size="60px" >                    
+                <BsArrowDownShort color="black" size="60px"  >                    
                 </BsArrowDownShort>                             
             </div>                
                 <ContainerViewPort type={'cover'} references={this.cover} documentInfo={this.props.documentInfo} onFocusViewPort={this.onFocusViewPort} ></ContainerViewPort>
@@ -64,5 +64,19 @@ export default class Cover extends Component
             }                        
         }
         
+    }
+
+    goToLocalComponent = ()=>
+    {
+        
+        this.props.onGoToLocalComponent(
+            {cover:
+                {
+                    top:this.cover.current.getBoundingClientRect().top,
+                    bottom: this.cover.current.getBoundingClientRect().bottom,
+                    height: this.cover.current.getBoundingClientRect().height
+                }
+            }
+         )
     }
 }
