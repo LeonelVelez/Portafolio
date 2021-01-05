@@ -70,6 +70,7 @@ El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproduci
     }
 
     onFocusViewPort = (e)=>{
+        
         this.props.onFocusViewPort(e)
     }
 

@@ -39,7 +39,10 @@ export default class Me extends Component
         );
     }
     onFocusViewPort = (e)=>{
-        this.props.onFocusViewPort({colorHeader:{menu:'black', nav:'black'}, type:e.type})
+        if(e.type === 'me' && e.match)
+        {
+            this.props.onFocusViewPort({colorHeader:{menu:'black', nav:'black'}, type:e.type})
+        }        
     }
 
 }

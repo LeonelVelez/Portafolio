@@ -67,7 +67,7 @@ export default class Header extends Component {
          {
           ...this.state,
           menu: {...this.state.menu, colorIcons: {menu:this.props.colorMenu, nav:this.props.colorNav}}          
-         },()=>console.log(this.state)
+         }
        )
        
      }

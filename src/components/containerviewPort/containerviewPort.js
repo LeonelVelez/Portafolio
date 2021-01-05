@@ -16,9 +16,12 @@ import React, {Component} from 'react'
         {                        
             if(newprops.documentInfo !== this.props.documentInfo)       
             {
+                console.log("cambio")
                 if(this.props.references.current.getBoundingClientRect().top <= 0 && this.props.references.current.getBoundingClientRect().bottom >= 0)
                 {
-                    this.props.onFocusViewPort({type:this.props.type});                        
+                    this.props.onFocusViewPort({type:this.props.type, match:true});                        
+                }else{
+                    this.props.onFocusViewPort({type:this.props.type, match:false});                        
                 }
             }            
         }

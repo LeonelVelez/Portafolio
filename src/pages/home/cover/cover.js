@@ -42,11 +42,11 @@ export default class Cover extends Component
         );
     }
     onFocusViewPort = (e)=>{
-        if(e.type === 'cover')
+        if(e.type === 'cover' && e.match)
         {
             this.props.onFocusViewPort({colorHeader:{menu:'black', nav:'black'}, type:e.type})
         }else{
-            if(e.type === 'titleCover')
+            if(e.type === 'titleCover' && e.match)
             {
                 if(window.matchMedia('(max-width:900px)').matches)
                 {
@@ -55,12 +55,14 @@ export default class Cover extends Component
                 }
 
             }else{
-                
-                if(window.matchMedia('(max-width:400px)').matches)
+                if(e.type === 'imageCover' && e.match)
                 {
-                    
-                    this.props.onFocusViewPort({colorHeader:{menu:'white', nav:'white'}, type:e.type})
-                }            
+                    if(window.matchMedia('(max-width:400px)').matches)
+                    {                        
+                        this.props.onFocusViewPort({colorHeader:{menu:'white', nav:'white'}, type:e.type})
+                    }   
+                }
+                         
             }                        
         }
         
