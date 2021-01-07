@@ -10,6 +10,7 @@ header{
     z-index: 1;
 }
 
+
 .items
 {
     text-decoration: none;
@@ -67,6 +68,8 @@ header section, #logoHeader{
     transition: 0.2s;
     padding-right: 30px;
     transform: rotateY(90deg);
+    
+    
     
     
 

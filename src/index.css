@@ -31,3 +31,47 @@ code {
 .column{
   flex-direction: column;
 }
+
+.center-x
+{
+  justify-content: center;
+}
+
+.center-y
+{
+  align-items: center;
+}
+
+.center
+{
+  align-items: center;
+  justify-content: center;
+}
+
+.button
+{
+    
+    outline: none;
+    
+    margin: 30px;
+    border: 1px;    
+    border-style: solid;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.offline
+{
+    background: rgb(51, 50, 50);
+    color: white;
+    border-color:rgb(51, 50, 50);
+
+}
+
+.outline{
+    background: yellow;
+    color: black;
+    border-color: black;
+}
+

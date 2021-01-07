@@ -3,11 +3,11 @@
     background: url(./../../../img/aboutMe.jpg);
     text-align: center;        
     
-    background-position-y: center;
-    background-position-x: center;
-    
-    
+    background-position: center;
+    background-attachment: fixed;
+    width: 1200px;
     background-size: cover;
+    margin-top: 60px;
     background-repeat: no-repeat;    
     
 }
@@ -16,5 +16,122 @@
 .child
 {
     height: 900px;
+    background: white;
     width: 900px;
+}
+#me
+{
+    background: white;    
+    
+        
+}
+#description
+{
+    
+    position: absolute;
+    background: yellow;
+    text-align: center;
+    padding: 20px;
+    padding-left: 76px;
+    padding-right: 76px;
+    left: 15%;
+    
+    border-radius: 25px;
+    margin-top: 20px;
+    
+
+
+    
+}
+
+
+#description p, h2 {
+    padding: 20px;
+    
+}
+
+#description h2 {
+    padding-top: 60px;
+    font-size: 36px;
+}
+
+#description p {
+    max-width: 500px;
+    padding-bottom: 60px;
+    font-size: 26px;
+    
+}
+
+#autor
+{
+    font-size: 20px;
+}
+
+#cita
+{
+    font-size: 28px;
+    font-style: italic;
+}
+
+#description .outline:hover
+{
+    background: yellow;
+    cursor: pointer;
+}
+
+#description .offline:hover
+{
+    background: rgb(51, 50, 50);
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 992px) { 
+    
+    .child
+    {
+        display: none;
+    }   
+    #description
+    {
+        position: static;    
+    }
+
+    #me
+    {
+        justify-content: center;
+    }
+
+    #description
+    {
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    #description h2 {
+        font-size: 30px;
+    }
+
+    #description p {
+        font-size: 21px;
+    }
+
+    #autor
+    {
+        font-size: 16px;
+    }
+
+    #cita
+    {
+        font-size: 24px;
+        font-style: italic;
+    }
+
+    #buttons
+    {
+        flex-direction: column;
+    }
 }

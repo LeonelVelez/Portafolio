@@ -9,6 +9,7 @@ class App extends Component {
     
     super(props)    
     this.onFocusViewPort = this.onFocusViewPort.bind(this)    
+    this.onActionMenu = this.onActionMenu.bind(this)
     this.state = {
       documentInfo : {
         scrollY:0,
@@ -89,6 +90,10 @@ class App extends Component {
     }
 
     return pageSolicitada
+
+  }
+
+  onActionMenu = (e)=>{
 
   }
 

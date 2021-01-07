@@ -10,7 +10,7 @@ export default class Header extends Component {
  constructor(props) {
     super(props);
     this.menuButtonTop = React.createRef();
-    
+    this.header = React.createRef();
     
     this.state = {
       menu: {
@@ -77,7 +77,7 @@ export default class Header extends Component {
 
     return (
       <div>          
-          <header >              
+          <header ref={this.header} >              
               <Link to='/home' onClick={()=>{this.onMovePath('/home')}}><LogoHeader  id='logoHeader' fill={this.state.menu.colorIcons.nav} stroke={this.state.menu.colorIcons.nav} ></LogoHeader></Link>
               
               <section id="navBar" className="container row">
@@ -141,7 +141,7 @@ export default class Header extends Component {
     }, ()=> {
       
       this.menuButtonTop.current.style.top = this.state.menu.positionButtonMenuTop
-      
+      this.changeZIndexHeader('2')
     })      
   }
 
@@ -169,6 +169,7 @@ export default class Header extends Component {
         }        
       }, ()=> {
         this.menuButtonTop.current.style.top = this.state.menu.positionButtonMenuTop                      
+        this.changeZIndexHeader('1')
       })      
   }
 
@@ -179,6 +180,14 @@ export default class Header extends Component {
       left:0,
       behavior:'smooth'
     })    
+  }
+
+  changeZIndexHeader = (index)=>{
+    if(window.matchMedia('(max-width: 538px)').matches)
+    {
+      this.header.current.style.zIndex = index
+    }
+    
   }
   
 

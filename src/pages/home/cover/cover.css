@@ -12,7 +12,8 @@
     animation: showIcon;   
     animation-duration: 2s;
     text-align: center;
-    z-index: 2;
+    padding-bottom: 60px;
+    z-index: 1;
 }
 #footer:hover
 {
