@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import ContainerCapa from '../../../components/containeCapa/containerCapa';
 import ContainerViewPort from '../../../components/containerviewPort/containerviewPort';
 import  './me.css';
 export default class Me extends Component
@@ -19,7 +20,7 @@ export default class Me extends Component
                     <div className="child"></div>
                     <div className="child" id="imagenIlustra"></div>    
                     <div id="description" className="container center">
-                        <section className="capa" >
+                        <ContainerCapa color="var(--color-secondary)">
                             <h2> Who i'm? How can i help u? </h2>
                             <p> 
                                 Well! I'm software engineer, I'm 22 years old and I have worked on many software proyects in Guayaquil, Ecuador.
@@ -38,8 +39,7 @@ export default class Me extends Component
                                 </div>                   
                                 
                             </p>
-                        </section>
-                        
+                        </ContainerCapa>                                                    
                     </div>                                                
                     <ContainerViewPort type={'me'} references={this.me} documentInfo={this.props.documentInfo} onFocusViewPort={this.onFocusViewPort} ></ContainerViewPort>
                 </section>
