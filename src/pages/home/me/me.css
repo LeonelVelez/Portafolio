@@ -25,28 +25,33 @@
     
         
 }
+.capa{
+    background: black;
+    width: 100%;    
+    margin: 0px;
+    padding: 0px;    
+    height: 100%;
+    
+    
+}
 #description
 {
     
     position: absolute;
-    background: yellow;
-    text-align: center;
-    padding: 20px;
-    padding-left: 76px;
-    padding-right: 76px;
+    background: rgb(255, 255, 0);
+    text-align: center;    
     left: 15%;
     
     border-radius: 25px;
     margin-top: 20px;
-    
-
-
-    
+        
 }
 
 
 #description p, h2 {
     padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
     
 }
 
