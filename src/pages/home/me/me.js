@@ -19,7 +19,7 @@ export default class Me extends Component
                     <div className="child"></div>
                     <div className="child" id="imagenIlustra"></div>    
                     <div id="description" className="container center">
-                        <section >
+                        <section className="capa" >
                             <h2> Who i'm? How can i help u? </h2>
                             <p> 
                                 Well! I'm software engineer, I'm 22 years old and I have worked on many software proyects in Guayaquil, Ecuador.
@@ -51,9 +51,9 @@ export default class Me extends Component
         {
             if(window.matchMedia('(max-width: 992px)').matches)
             {
-                this.props.onFocusViewPort({colorHeader:{menu:'black', nav:'black'}, type:e.type})
+                this.props.onFocusViewPort({colorHeader:{menu:'var(--color-secondary)', nav:'var(--color-secondary)'}, type:e.type})
             }else{
-                this.props.onFocusViewPort({colorHeader:{menu:'white', nav:'black'}, type:e.type})
+                this.props.onFocusViewPort({colorHeader:{menu:'white', nav:'var(--color-secondary)'}, type:e.type})
             }
             
         }        

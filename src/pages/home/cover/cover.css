@@ -1,6 +1,6 @@
 #cover.container.column
 {
-    background: yellow;
+    background: var(--color-primary);
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -103,7 +103,7 @@
 #body.container.row h1
 {
     margin-left: 40px;
-    
+    color: var(--color-secondary);
     max-width: 800px;
     font-size: 55px;
     animation: showWord;

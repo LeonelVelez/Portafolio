@@ -32,7 +32,7 @@ export default class Cover extends Component
                 </div>                
             <div id="footer" onClick={this.goToLocalComponent}>
                 
-                <BsArrowDownShort color="black" size="60px"  >                    
+                <BsArrowDownShort color="var(--color-secondary)" size="60px"  >                    
                 </BsArrowDownShort>                             
             </div>                
                 <ContainerViewPort type={'cover'} references={this.cover} documentInfo={this.props.documentInfo} onFocusViewPort={this.onFocusViewPort} ></ContainerViewPort>
@@ -44,7 +44,7 @@ export default class Cover extends Component
     onFocusViewPort = (e)=>{
         if(e.type === 'cover' && e.match)
         {
-            this.props.onFocusViewPort({colorHeader:{menu:'black', nav:'black'}, type:e.type})
+            this.props.onFocusViewPort({colorHeader:{menu:'var(--color-secondary)', nav:'var(--color-secondary)'}, type:e.type})
         }else{
             if(e.type === 'titleCover' && e.match)
             {

@@ -63,15 +63,27 @@ code {
 
 .offline
 {
-    background: rgb(51, 50, 50);
+    background: var(--color-secondary);
     color: white;
-    border-color:rgb(51, 50, 50);
+    border-color:var(--color-secondary);
 
 }
 
 .outline{
-    background: yellow;
-    color: black;
-    border-color: black;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
 }
 
+.capa{
+  background: var(--color-secondary);
+  width: 100%;    
+  margin: 0px;
+  padding: 0px;    
+  height: 100%;        
+}
+
+:root{
+  --color-secondary: rgb(53, 51, 51);
+  --color-primary : yellow;
+}

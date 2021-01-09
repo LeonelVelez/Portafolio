@@ -19,7 +19,7 @@ export default class Header extends Component {
         gradosButtonMenuTop : 'rotateZ(0)',
         gradosButtonMenuBottom : 'rotateZ(0)',
         positionButtonMenuTop : '0px' ,
-        colorIcons: {menu:'black', nav:'black'}      
+        colorIcons: {menu:'var(--color-secondary)', nav:'var(--color-secondary)'}      
       },
       documentInfo : this.props.documentInfo,
       itemsMenu : Vars.Menu
@@ -115,7 +115,7 @@ export default class Header extends Component {
 
   openMenu = ()=>{
     let top = '0px';
-    let colorMenu = 'black';
+    let colorMenu = 'var(--color-secondary)';
     if(window.matchMedia('(max-width: 1320px)').matches)
     {
       top = '30px';
