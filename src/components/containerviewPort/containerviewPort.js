@@ -5,19 +5,24 @@ import React, {Component} from 'react'
         constructor(props)
         {
             super(props)                
+            this.containerView = React.createRef();
         }
         render()
         {            
             return (
-                <></>
+                <>
+                <section ref={this.containerView}>
+                       {this.props.children} 
+                </section>
+                </>
              );         
         }           
         componentDidUpdate(newprops)
-        {                        
+        {
+            
             if(newprops.documentInfo !== this.props.documentInfo)       
-            {
-                console.log("cambio")
-                if(this.props.references.current.getBoundingClientRect().top <= 0 && this.props.references.current.getBoundingClientRect().bottom >= 0)
+            {                
+                if(this.containerView.current.getBoundingClientRect().top <= 0 && this.containerView.current.getBoundingClientRect().bottom >= 0)
                 {
                     this.props.onFocusViewPort({type:this.props.type, match:true});                        
                 }else{

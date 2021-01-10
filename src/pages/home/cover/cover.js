@@ -8,12 +8,13 @@ import ContainerViewPort from '../../../components/containerviewPort/containervi
 
 export default class Cover extends Component
 {
+    
     constructor(props)   
     {
+        
         super(props)
-        this.cover = React.createRef()
-        this.titleCover = React.createRef()
-        this.imageCover = React.createRef()
+        this.state = {viewPort : {onFocusChildren: false , type: ''}}
+        this.cover = React.createRef()        
         this.onFocusViewPort = this.onFocusViewPort.bind(this)
 
     }
@@ -21,53 +22,91 @@ export default class Cover extends Component
     render()
     {
         return (
-            <div className="container column" id="cover" ref={this.cover}>
+            <ContainerViewPort type={'cover'}  documentInfo={this.props.documentInfo} onFocusViewPort={this.onFocusViewPort} >
+                <div className="container column" id="cover" ref={this.cover}>
                 <div className="container row" id="body" >
-                    <img ref={this.imageCover} className="text-left" id="portadaImg" src={portada}  alt="Leonel Vélez"></img>
+                <ContainerViewPort type={'imageCover'}  documentInfo={this.props.documentInfo} onFocusViewPort={this.onFocusViewPort} >
+                    <img  className="text-left" id="portadaImg" src={portada}  alt="Leonel Vélez"></img>
+                </ContainerViewPort>
+                    
                     <section >
-                        <h1 className="text-rigth" ref={this.titleCover}>
-                            {Vars.ParagraphHome.title}
-                        </h1>
+                        <ContainerViewPort type={'titleCover'}  documentInfo={this.props.documentInfo} onFocusViewPort={this.onFocusViewPort} >
+                            <h1 className="text-rigth" >
+                                {Vars.ParagraphHome.title}
+                            </h1>
+                        </ContainerViewPort>                        
                     </section>
                 </div>                
-            <div id="footer" onClick={this.goToLocalComponent}>
-                
-                <BsArrowDownShort color="var(--color-secondary)" size="60px"  >                    
-                </BsArrowDownShort>                             
-            </div>                
-                <ContainerViewPort type={'cover'} references={this.cover} documentInfo={this.props.documentInfo} onFocusViewPort={this.onFocusViewPort} ></ContainerViewPort>
-                <ContainerViewPort type={'titleCover'} references={this.titleCover} documentInfo={this.props.documentInfo} onFocusViewPort={this.onFocusViewPort} ></ContainerViewPort>
-                <ContainerViewPort type={'imageCover'} references={this.imageCover} documentInfo={this.props.documentInfo} onFocusViewPort={this.onFocusViewPort} ></ContainerViewPort>
-            </div>
+                <div id="footer" onClick={this.goToLocalComponent}>                    
+                    <BsArrowDownShort color="var(--color-secondary)" size="60px"  ></BsArrowDownShort>                             
+                </div>                                                                        
+                </div>
+            </ContainerViewPort>            
         );
     }
     onFocusViewPort = (e)=>{
-        if(e.type === 'cover' && e.match)
-        {
-            this.props.onFocusViewPort({colorHeader:{menu:'var(--color-secondary)', nav:'var(--color-secondary)'}, type:e.type})
-        }else{
-            if(e.type === 'titleCover' && e.match)
-            {
-                if(window.matchMedia('(max-width:900px)').matches)
-                {
-                    
-                    this.props.onFocusViewPort({colorHeader:{menu:'white', nav:'white'}, type:e.type})
-                }
-
-            }else{
-                if(e.type === 'imageCover' && e.match)
-                {
-                    if(window.matchMedia('(max-width:400px)').matches)
-                    {                        
-                        this.props.onFocusViewPort({colorHeader:{menu:'white', nav:'white'}, type:e.type})
-                    }   
-                }
-                         
-            }                        
-        }
         
-    }
+        switch (e.type) {
+            case 'cover':
+                    if(e.match)
+                    {
+                        
+                        if(!this.state.viewPort.onFocusChildren)
+                        {
+                            this.props.onFocusViewPort({colorHeader:{menu:'var(--color-secondary)', nav:'var(--color-secondary)'}, type:e.type})    
+                        }                        
+                    }
+            break;
 
+            case 'titleCover':
+                    if(e.match)
+                    {
+                        if(window.matchMedia('(max-width:900px)').matches)
+                        {                          
+
+                            this.props.onFocusViewPort({colorHeader:{menu:'white', nav:'white'}, type:e.type})
+                            this.setState(
+                                {viewPort:{onFocusChildren:true, type : e.type}}                                
+                            )
+                        }
+                    }else{
+                        if(this.state.viewPort.onFocusChildren && this.state.viewPort.type === 'titleCover' )
+                        {
+                            this.setState(
+                                {viewPort:{onFocusChildren:false, type : e.type}}                                
+                            )
+                        }
+                        
+
+                    }            
+            break;
+
+            case 'imageCover':
+                    if(e.match)
+                    {
+                        if(window.matchMedia('(max-width:400px)').matches)
+                        {                        
+                            this.props.onFocusViewPort({colorHeader:{menu:'white', nav:'white'}, type:e.type})
+                            this.setState(
+                                {viewPort:{onFocusChildren:true, type : e.type}}                                
+                            )
+                            
+                        }
+                    }else{
+                        if(this.state.viewPort.onFocusChildren && this.state.viewPort.type === 'imageCover' )
+                        {
+                            this.setState(
+                                {viewPort:{onFocusChildren:false, type : e.type}}                                
+                            )
+                        }                
+                    }
+            break;        
+            default:
+
+            break;
+        }
+                
+    }
     goToLocalComponent = ()=>
     {
         
