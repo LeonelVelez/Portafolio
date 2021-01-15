@@ -70,7 +70,7 @@ class App extends Component {
   }  
 
   onFocusViewPort = (e)=>{
-    console.log(e)
+    
     this.setState({
       ...this.state,
       colorIconsHeader : {menu:e.colorHeader.menu, nav:e.colorHeader.nav}

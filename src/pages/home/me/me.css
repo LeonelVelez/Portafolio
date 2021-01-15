@@ -22,6 +22,8 @@
 #me
 {
     background: white;    
+    position: relative;
+    width: 100%;
     
         
 }
@@ -29,8 +31,8 @@
 #description
 {
     
-    position: absolute;
-    background: rgb(255, 255, 0);
+    position: absolute;    
+    
     text-align: center;    
     left: 15%;
     
@@ -73,13 +75,13 @@
 
 #description .outline:hover
 {
-    background: yellow;
+    background: var(--color-primary);
     cursor: pointer;
 }
 
 #description .offline:hover
 {
-    background: rgb(51, 50, 50);
+    background: var(--color-secondary);
     cursor: pointer;
 }
 
