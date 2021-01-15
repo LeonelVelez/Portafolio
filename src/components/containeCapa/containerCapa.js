@@ -10,7 +10,7 @@ export default class ContainerCapa extends Component
         super(props)
         this.state =
          {
-             element:{width:'0px', heigh:'100%', background:'transparent', visibility:'hidden'}             
+             element:{width:'0px', heigh:'100%', background:'transparent', visibility:'hidden', backgroundImage:''}             
          }
 
          
@@ -20,7 +20,7 @@ export default class ContainerCapa extends Component
     {    
         
         return (
-          <section className={`${this.props.className}`} id={this.props.id} style={this.props.style} >
+          <section  className={`${this.props.className}`} id={this.props.id} style={{...this.props.style, backgroundImage:`url(${this.state.element.backgroundImage})`}} >
               <div className='capa' style={{...this.props.style, background:`${this.state.element.background}`, visibility:`${this.state.element.visibility}`}}>
                 {this.props.children}
                 <div id="capa"  style={{ ...this.props.style, background:this.props.colorCap, width:this.state.element.width,height:this.state.element.heigh, transition:'0.7s', display:'inline-block', visibility:'visible'}}></div>
@@ -53,12 +53,12 @@ export default class ContainerCapa extends Component
                         this.setState(                            
                             {
                                 ...this.state,                                                                
-                                element:{...this.state.element, width:'0px', visibility:'visible', background:this.props.background}                                
+                                element:{...this.state.element, width:'0px', visibility:'visible', background:this.props.background, backgroundImage:this.props.image}                                
                             },
                             ()=>console.log(this.state)                                                    
                          )           
                          
-                    },1000)
+                    },600)
                 })
                 
             }else{

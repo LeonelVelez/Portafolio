@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import ContainerCapa from '../../../components/containeCapa/containerCapa';
 import ContainerViewPort from '../../../components/containerviewPort/containerviewPort';
+import imageMe from './../../../img/aboutMe.jpg'
 import  './me.css';
 export default class Me extends Component
 {
@@ -9,7 +10,8 @@ export default class Me extends Component
     {
         super(props)
         this.state = {capa:[
-            {id:1, type:'description', show:false}            
+            {id:1, type:'description', show:false},
+            {id:2, type:'imageMe', show:false}                        
         ]}
         this.onFocusViewPort = this.onFocusViewPort.bind(this)        
     }
@@ -21,7 +23,7 @@ export default class Me extends Component
                 <ContainerViewPort type={'me'}  documentInfo={this.props.documentInfo} onFocusViewPort={this.onFocusViewPort} >
                     <section id="me" className="container row" >
                         <div className="child"></div>
-                        <div className="child" id="imagenIlustra"></div>    
+                        <ContainerCapa image={imageMe} className="child" id="imagenIlustra" colorCap="var(--color-secondary)" show={this.state.capa.find(x=>x.id===2).show}></ContainerCapa>    
                         <ContainerCapa id="description" className="container column center" background="var(--color-primary)" colorCap="var(--color-secondary)" show={this.state.capa.find(x=>x.id===1).show}  >
                             <h2> Who i'm? How can i help u? </h2>
                             <p> 
