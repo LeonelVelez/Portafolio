@@ -3,6 +3,7 @@ import ContainerCapa from '../../../components/containeCapa/containerCapa';
 import ContainerViewPort from '../../../components/containerviewPort/containerviewPort';
 import imageMe from './../../../img/aboutMe.jpg'
 import  './me.css';
+import Vars from './../../../vars'
 export default class Me extends Component
 {
     changeCaps = false;
@@ -25,16 +26,15 @@ export default class Me extends Component
                         <div className="child"></div>
                         <ContainerCapa image={imageMe} className="child" id="imagenIlustra" colorCap="var(--color-secondary)" show={this.state.capa.find(x=>x.id===2).show}></ContainerCapa>    
                         <ContainerCapa id="description" className="container column center" background="var(--color-primary)" colorCap="var(--color-secondary)" show={this.state.capa.find(x=>x.id===1).show}  >
-                            <h2> Who i'm? How can i help u? </h2>
+                            <h2> {Vars.Paragraphs.home.me.tile} </h2>
                             <p> 
-                                Well! I'm software engineer, I'm 22 years old and I have worked on many software proyects in Guayaquil, Ecuador.
-                                As you can see, I can speak both languages (english and spanish), and this is not the only skill I have. Next,  you can check out my skills and Portafolio.
+                                {Vars.Paragraphs.home.me.body}
                                 <br></br>
                                 <br></br>
                                 <span id="cita">
-                                    "La ignorancia es la cuna del miedo pero a mi no me da miedo preguntar por qué?"
+                                    {Vars.Paragraphs.home.me.footer.cita}
                                     <br></br>
-                                    <span id="autor" >- Roberto Musso</span>
+                                    <span id="autor" >- {Vars.Paragraphs.home.me.footer.autor}</span>
                                 </span>
                                 <br></br>         
                                 <div className="container row center" id="buttons">

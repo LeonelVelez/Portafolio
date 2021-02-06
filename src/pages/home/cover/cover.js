@@ -32,7 +32,7 @@ export default class Cover extends Component
                     <section >
                         <ContainerViewPort type={'titleCover'}  documentInfo={this.props.documentInfo} onFocusViewPort={this.onFocusViewPort} >
                             <h1 className="text-rigth" >
-                                {Vars.ParagraphHome.title}
+                                {Vars.Paragraphs.home.cover.title}
                             </h1>
                         </ContainerViewPort>                        
                     </section>

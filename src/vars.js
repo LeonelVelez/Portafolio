@@ -1,10 +1,10 @@
 import React from 'react'
-import { BsHouse, BsPerson,BsFolder,BsPlay,BsLayoutTextWindowReverse } from "react-icons/bs";
-let Names =  {
+import { BsHouse,BsFolder,BsPlay,BsLayoutTextWindowReverse } from "react-icons/bs";
+const Names =  {
     firtsName: 'Leonel',
     secondName: 'Vélez'
 }
-let Vars = {
+const Vars = {
     Menu : [{
         id: 1,
         name : 'Home',
@@ -66,9 +66,64 @@ let Vars = {
         icon: <BsLayoutTextWindowReverse size='30px' color='black' ></BsLayoutTextWindowReverse>        
     },
 ],
-    
-ParagraphHome:{
-    title: `Hi, my name is ${Names.firtsName}. I'm Software Developer, Back, Front, Philanthropist & Playboy`
+
+Paragraphs:
+{
+    home:{
+
+        cover:{
+            title: `Hi, my name is ${Names.firtsName}. I'm Software Developer, Back, Front, Philanthropist & Playboy`
+        },
+        me:{
+            tile:`Who i'm? How can i help u?`,
+            body:`Well! I'm software engineer, I'm 22 years old and I have worked on many software proyects in Guayaquil, Ecuador.
+            As you can see, I can speak both languages (english and spanish), and this is not the only skill I have. Next,  you can check out my skills and Portafolio.`,
+            footer:{
+                cita: `"La ignorancia es la cuna del miedo pero a mi no me da miedo preguntar por qué?"`,
+                autor: `Roberto Musso`
+            }
+        },
+        skills:
+        [
+            {
+                id:1,
+                type:'Web Development',
+                items:[
+                    {
+                        id:1,
+                        name:'',
+                        icon:'',
+                        detail:''
+                    },
+                    {
+                        id:2,
+                        name:'',
+                        icon:'',
+                        detail:''
+                    },
+                    {
+                        id:3,
+                        name:'',
+                        icon:'',
+                        detail:''
+                    },
+                    {
+                        id:4,
+                        name:'',
+                        icon:'',
+                        detail:''
+                    },
+                    {
+                        id:5,
+                        name:'',
+                        icon:'',
+                        detail:''
+                    }
+                ],
+                
+            }            
+        ]             
+    }    
 }
 }
 export default Vars;
