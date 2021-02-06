@@ -21,7 +21,7 @@ let Skills = (props)=>{
 
     
     return (<>
-        <Grid>
+        <Grid type="grid-5-1">
             {
                 Vars.Paragraphs.home.skills[0].items.map(x=>{
                     return (

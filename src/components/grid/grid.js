@@ -3,10 +3,7 @@ import './grid.css'
 
 let Grid = (props)=>{
     
-    let [state, setState] = useState({
-        rows:0,
-        colums:5
-    });
+    
 
     //constructor
     useEffect(()=>{
@@ -18,14 +15,12 @@ let Grid = (props)=>{
     
     }, [])
 
-    
-
-    
     return (<>
-        <section id='grid'>            
+        <section id={props.type} className="grid">            
                 {props.children}
         </section>
     </>);
+
 }
 
 export default Grid;
