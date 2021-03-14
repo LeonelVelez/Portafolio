@@ -5,6 +5,7 @@ import Vars from './../../../vars'
 
 let Skills = (props)=>{
     
+    let numberCycle=0;
     let [state, setState] = useState({});
     //constructor
     useEffect(()=>{
@@ -22,33 +23,41 @@ let Skills = (props)=>{
     
     return (<>
         <h2>I Can Help U With This ...</h2>
-        <Grid type="grid-5-1">
+
+        {Vars.Paragraphs.home.skills.map(recorre=>{
+            
+            let itemNumber = 0;
+            let typeGrid = '';
+            if(recorre.items.length > 5)
             {
-                Vars.Paragraphs.home.skills[0].items.map(x=>{
-                    return (
-                        <div key={x.id}></div>
-                    );
-                })
+                itemNumber  = 5;
+
+            }else{
+                itemNumber = recorre.items.length;     
+                typeGrid =  `grid-${itemNumber}`
+                if(recorre.items.length === 5)
+                {
+                    numberCycle++;
+                    typeGrid = typeGrid + `-${numberCycle}`
+                    if(numberCycle === 3)
+                    {
+                        numberCycle = 0;
+                    }                    
+                }
+                
             }
-        </Grid>
-        <Grid type="grid-5-2">
-            {
-                Vars.Paragraphs.home.skills[0].items.map(x=>{
-                    return (
-                        <div key={x.id}></div>
-                    );
-                })
-            }
-        </Grid>
-        <Grid type="grid-5-3">
-            {
-                Vars.Paragraphs.home.skills[0].items.map(x=>{
-                    return (
-                        <div key={x.id}></div>
-                    );
-                })
-            }
-        </Grid>
+            
+           return <Grid type={typeGrid} key={recorre.id}>
+                {
+                    recorre.items.map(reccoreItems=>{
+                        return   (
+                            <div key={ `${recorre.id}-${reccoreItems.id}`}></div>
+                        );
+                    })
+                }
+            </Grid>
+        })}
+      
     </>);
 }
 
