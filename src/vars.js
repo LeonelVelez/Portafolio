@@ -93,31 +93,37 @@ Paragraphs:
                         id:1,
                         name:'',
                         icon:'',
-                        detail:''
+                        detail:'',
+                        img: ''
                     },
                     {
                         id:2,
                         name:'',
                         icon:'',
-                        detail:''
+                        detail:'',
+                        img: ''
+
                     },
                     {
                         id:3,
                         name:'',
                         icon:'',
-                        detail:''
+                        detail:'',
+                        img: ''
                     },
                     {
                         id:4,
                         name:'',
                         icon:'',
-                        detail:''
+                        detail:'',
+                        img: ''
                     },
                     {
                         id:5,
                         name:'',
                         icon:'',
-                        detail:''
+                        detail:'',
+                        img: ''
                     }
                 ],
                 
@@ -130,31 +136,36 @@ Paragraphs:
                         id:1,
                         name:'',
                         icon:'',
-                        detail:''
+                        detail:'',
+                        img: ''
                     },
                     {
                         id:2,
                         name:'',
                         icon:'',
-                        detail:''
+                        detail:'',
+                        img: ''
                     },
                     {
                         id:3,
                         name:'',
                         icon:'',
-                        detail:''
+                        detail:'',
+                        img: ''
                     },
                     {
                         id:4,
                         name:'',
                         icon:'',
-                        detail:''
+                        detail:'',
+                        img: ''
                     },
                     {
                         id:5,
                         name:'',
                         icon:'',
-                        detail:''
+                        detail:'',
+                        img: ''
                     }
                 ],
                 
@@ -167,35 +178,42 @@ Paragraphs:
                         id:1,
                         name:'',
                         icon:'',
-                        detail:''
+                        detail:'',
+                        img: ''
                     },
                     {
                         id:2,
                         name:'',
                         icon:'',
-                        detail:''
+                        detail:'',
+                        img: ''
                     },
                     {
                         id:3,
                         name:'',
                         icon:'',
-                        detail:''
+                        detail:'',
+                        img: ''
                     },
                     {
                         id:4,
                         name:'',
                         icon:'',
-                        detail:''
+                        detail:'',
+                        img: ''
                     },
                     {
                         id:5,
                         name:'',
                         icon:'',
-                        detail:''
+                        detail:'',
+                        img: ''
                     }
                 ],
                 
-            }              
+            } 
+            
+
         ]             
     }    
 }
