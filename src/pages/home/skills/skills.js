@@ -5,58 +5,119 @@ import Vars from './../../../vars'
 
 let Skills = (props)=>{
     
-    let numberCycle=0;
-    let [state, setState] = useState({});
+    //let numberCycle=0;
+    //let [state, setState] = useState({});
+
+
     //constructor
-    useEffect(()=>{
-        
-    })
+    let itemsSkills = new Array();
+    let dividedItemsSkills = new Array();
 
     //didmount
     useEffect(()=>{
         
     }, [])
-
-    //didupdate
     
+    
+    const getNumbersOfGrids = ()=>{
+        if(itemsSkills.length % 5 === 0)
+        {
+            return itemsSkills.length / 5;
+        }else{
+            let result = Number(itemsSkills.length / 5).toFixed(0)
 
+            
+            return (Number(result) +1);
+        }
+    }
+    const divideArray = ()=>{
+
+        let sumOfIncrement = 0;
+        let lengthItemsSkills = itemsSkills.length;
+        let validation = itemsSkills.length;
+        let arrayReturn = new Array();
+        let cantidad = getNumbersOfGrids();
+        for(let iterador = 0; iterador < getNumbersOfGrids(); iterador++ )
+        {
+            let increment = 0;
+            
+            if(validation >= 5)
+            {
+                increment = 5
+            }else{
+                increment = validation;
+            }
+            sumOfIncrement = sumOfIncrement + increment;
+
+            let arraySkills = itemsSkills.slice((sumOfIncrement-increment), sumOfIncrement )
+            arrayReturn.push(arraySkills);
+            validation = (lengthItemsSkills = lengthItemsSkills -5);
+        }
+
+        return arrayReturn;
+    }
+    
+    const generateGridEelement = (recorre)=>{
+       const retorno =  recorre.map((recorreItem, index)=>{
+            return <div key={index}> hola </div>
+        });
+
+        return retorno;
+    };
+
+    const generateGrid = ()=>
+    {
+        
+        
+        let typeFive=0;
+        const retorno = dividedItemsSkills.map((recorre, index)=>{
+            let type="grid-";    
+            if(recorre.length < 5)
+            {
+                type = type + `${recorre.length}`
+            }else{
+                typeFive++;
+                
+                type = type + `${recorre.length}-${typeFive}`
+
+                if(typeFive === 3)
+                {
+                    typeFive =0;
+                }
+            } 
+            
+            return <Grid key={index} type={type}>
+                {
+                    
+                   generateGridEelement(recorre)
+                }
+            </Grid>  
+          })
+
+          return retorno;
+    };
+
+    useEffect(()=>{
+    
+      
+    })
+
+
+    Vars.Paragraphs.home.skills.map(recorre=>{
+
+        recorre.items.forEach(recorreItem=>{
+            itemsSkills.push(recorreItem);
+        })
+    })
+    dividedItemsSkills = divideArray();
+    console.log(dividedItemsSkills)    
     
     return (<>
-        <h2>I Can Help U With This ...</h2>
-
-        {Vars.Paragraphs.home.skills.map(recorre=>{
+        <h2>I Can Help U With This ...</h2>        
+        {        
             
-            let itemNumber = 0;
-            let typeGrid = '';
-            if(recorre.items.length > 5)
-            {
-                itemNumber  = 5;
-
-            }else{
-                itemNumber = recorre.items.length;     
-                typeGrid =  `grid-${itemNumber}`
-                if(recorre.items.length === 5)
-                {
-                    numberCycle++;
-                    typeGrid = typeGrid + `-${numberCycle}`
-                    if(numberCycle === 3)
-                    {
-                        numberCycle = 0;
-                    }                    
-                }
-                
-            }
-            
-           return <Grid type={typeGrid} key={recorre.id}>
-                {
-                    recorre.items.map(reccoreItems=>{
-                        return   (
-                            <div key={ `${recorre.id}-${reccoreItems.id}`}></div>
-                        );
-                    })
-                }
-            </Grid>
-        })}
+            generateGrid()
+        }
       
     </>);
 }
