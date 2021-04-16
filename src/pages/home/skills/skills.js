@@ -35,8 +35,7 @@ let Skills = (props)=>{
         let sumOfIncrement = 0;
         let lengthItemsSkills = itemsSkills.length;
         let validation = itemsSkills.length;
-        let arrayReturn = new Array();
-        let cantidad = getNumbersOfGrids();
+        let arrayReturn = new Array();        
         for(let iterador = 0; iterador < getNumbersOfGrids(); iterador++ )
         {
             let increment = 0;
@@ -97,12 +96,7 @@ let Skills = (props)=>{
           return retorno;
     };
 
-    useEffect(()=>{
     
-      
-    })
-
-
     Vars.Paragraphs.home.skills.map(recorre=>{
 
         recorre.items.forEach(recorreItem=>{
@@ -110,7 +104,7 @@ let Skills = (props)=>{
         })
     })
     dividedItemsSkills = divideArray();
-    console.log(dividedItemsSkills)    
+
     
     return (<>
         <h2>I Can Help U With This ...</h2>        
