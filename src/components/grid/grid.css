@@ -18,35 +18,25 @@
 }
 #grid-5-1 > *:nth-child(1)
 {
-    background: blue;
+    
     grid-column: 1/3;
     grid-row: 1/3;
 }
 #grid-5-1 > *:nth-child(2)
 {
-    background: red;
+    
     grid-row: 1/3;
 
 }
 
 #grid-5-1 > *:nth-child(3)
 {
-    background: yellow;
+    
     grid-column: 4/6;
 
 }
 
-#grid-5-1 > *:nth-child(4)
-{
-    background: black;
 
-}
-
-#grid-5-1 > *:nth-child(5)
-{
-    background: brown;
-
-}
 
 
 
@@ -62,7 +52,7 @@
 
 #grid-5-2 > *:nth-child(1)
 {
-    background: blue;
+    
     grid-column: 1/2;
     grid-row: 1/3;
 }
@@ -70,28 +60,28 @@
 
 #grid-5-2 > *:nth-child(2)
 {
-    background: red;
+    
     grid-column: 2/3;
     grid-row: 1/3;
 }
 
 #grid-5-2 > *:nth-child(3)
 {
-    background: red;
+    
     grid-column: 3/4;
     grid-row: 1/2;
 }
 
 #grid-5-2 > *:nth-child(4)
 {
-    background: black;
+    
     grid-column: 3/4;
     grid-row: 2/3;
 }
 
 #grid-5-2 > *:nth-child(5)
 {
-    background: black;
+    
     grid-column: 4/6;
     grid-row: 1/3
 }
@@ -110,7 +100,6 @@
 
 #grid-5-3 > *:nth-child(1)
 {
-    background: red;
     grid-column: 1/4;
     grid-row: 1/2;
 }
@@ -118,7 +107,6 @@
 
 #grid-5-3 > *:nth-child(2)
 {
-    background: blue;
     grid-column: 1/3;
     grid-row: 2/3;
 
@@ -126,21 +114,18 @@
 
 #grid-5-3 > *:nth-child(3)
 {
-    background: brown;
     grid-column: 3/4;
     grid-row: 2/3;
 }
 
 #grid-5-3 > *:nth-child(4)
 {
-    background: black;
     grid-column: 4/5;
     grid-row: 1/3;
 }
 
 #grid-5-3 > *:nth-child(5)
 {
-    background: yellow;
     grid-column: 5/6;
     grid-row: 1/3
 }
@@ -152,10 +137,6 @@
 }
 
 
-#grid-4 > *{
-   
-    background: red;
-}
 
 #grid-3{
     grid-template-columns: repeat(3, 300px);
@@ -163,30 +144,19 @@
 
 }
 
-#grid-3 > *{
-   
-    background: red;
-}
-
 #grid-2{
     grid-template-columns: repeat(2, 300px);
     grid-template-rows: repeat(1, 250px);
 
 }
-#grid-2 > *{
-   
-    background: red;
-}
+
 
 #grid-1{
     grid-template-columns: repeat(1, 300px);
     grid-template-rows: repeat(1, 250px);
 }
 
-#grid-1 > *{
-   
-    background: red;
-}
+
 @media screen and (max-width: 1300px)
 {
     #grid-5-1

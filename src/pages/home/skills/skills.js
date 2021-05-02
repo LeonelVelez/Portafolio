@@ -2,6 +2,7 @@ import React, { useEffect, useState} from 'react'
 import './skills.css'
 import Grid from './../../../components/grid/grid'
 import Vars from './../../../vars'
+import  Tech from './tech/tech'
 
 let Skills = (props)=>{
     
@@ -58,7 +59,8 @@ let Skills = (props)=>{
     
     const generateGridEelement = (recorre)=>{
        const retorno =  recorre.map((recorreItem, index)=>{
-            return <div key={index}> hola </div>
+        return <Tech key={index} icon={recorreItem.icon} ></Tech>
+             
         });
 
         return retorno;

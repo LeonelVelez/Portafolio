@@ -1,5 +1,20 @@
 import React from 'react'
+import imgjs from './img/skills/js.png'
+import imgreact from './img/skills/react.png'
+import imgangular from './img/skills/angular.png'
+import imgts from './img/skills/ts.png'
+import imgnode from './img/skills/node.png'
+import imgcsharp from './img/skills/csharp.png'
+import imgnetcore from './img/skills/netcore.jpg'
+import imgdocker from './img/skills/docker.png'
+import imgpostman from './img/skills/postman.png'
+import imggit from './img/skills/git.png'
+import imgionic from './img/skills/ionic.jpeg'
 import { BsHouse,BsFolder,BsPlay,BsLayoutTextWindowReverse } from "react-icons/bs";
+import { DiAngularSimple, DiReact, DiJavascript1, DiNodejs, DiIonic, DiDocker, DiGit} from "react-icons/di";
+import { SiTypescript, SiCsharp, SiPostman} from "react-icons/si";
+
+
 const Names =  {
     firtsName: 'Leonel',
     secondName: 'Vélez'
@@ -91,145 +106,94 @@ Paragraphs:
                 items:[
                     {
                         id:1,
-                        name:'',
-                        icon:'',
+                        name:'javascript',
+                        icon: <DiJavascript1 size="330px 330px" color="rgb(36, 34, 34)" />,
                         detail:'',
-                        img: ''
+                        img: imgjs
+                        
                     },
                     {
                         id:2,
-                        name:'',
-                        icon:'',
+                        name:'react',
+                        icon: <DiReact size="330px 330px" color="rgb(36, 34, 34)" />,
                         detail:'',
-                        img: ''
+                        img: imgreact,
+                        imgSize : '600px 350px'
 
                     },
                     {
                         id:3,
-                        name:'',
-                        icon:'',
+                        name:'angular',
+                        icon: <DiAngularSimple size="330px 330px" color="rgb(36, 34, 34)" />,
                         detail:'',
-                        img: ''
+                        img: imgangular,
+                        imgSize : '680px 350px'
+
                     },
                     {
                         id:4,
-                        name:'',
-                        icon:'',
+                        name:'typescript',
+                        icon: <SiTypescript size="100px 300px" color="rgb(36, 34, 34)"/>,
                         detail:'',
-                        img: ''
+                        img: imgts,
+                        imgSize : '250px 250px'
                     },
                     {
                         id:5,
-                        name:'',
-                        icon:'',
+                        name:'nodejs',
+                        icon: <DiNodejs size="330px 330px"  color="rgb(36, 34, 34)"/>,
+                        detail:'', 
+                        img: imgnode,
+                        imgSize : '350px 200px'
+                    },
+                    {
+                        id:6,
+                        name:'ionic',
+                        icon: <DiIonic  size="330px 330px" color="rgb(36, 34, 34)"/>,
                         detail:'',
-                        img: ''
+                        img: imgionic,
+                        imgSize : '400px 350px'
                     }
                 ],
                 
             },
             {
                 id:2,
-                type:'Web Development',
+                type:'Back End',
                 items:[
                     {
                         id:1,
-                        name:'',
-                        icon:'',
+                        name:'c#',
+                        icon:<SiCsharp size="330px 330px" color="rgb(36, 34, 34)" />,
                         detail:'',
-                        img: ''
+                        img: imgcsharp,
+                        imgSize : '280px 350px'
                     },
                     {
                         id:2,
-                        name:'',
-                        icon:'',
+                        name:'postman',
+                        icon: <SiPostman  size="330px 330px"  color="rgb(36, 34, 34)"/>,
                         detail:'',
-                        img: ''
+                        img: imgpostman,
+                        imgSize : '400px 350px'
                     },
                     {
                         id:3,
-                        name:'',
-                        icon:'',
+                        name:'docker',
+                        icon: <DiDocker size="330px 330px" color="rgb(36, 34, 34)" />,
                         detail:'',
-                        img: ''
+                        img: imgdocker,
+                        imgSize : '270px 200px'
                     },
                     {
                         id:4,
-                        name:'',
-                        icon:'',
+                        name:'git',
+                        icon:<DiGit size="330px 330px"  color="rgb(36, 34, 34)"/>,
                         detail:'',
-                        img: ''
-                    },
-                    {
-                        id:5,
-                        name:'',
-                        icon:'',
-                        detail:'',
-                        img: ''
+                        img: imggit,
+                        imgSize : '390px 300px'
                     }
-                ],
-                
-            }  ,
-            {
-                id:3,
-                type:'Web Development',
-                items:[
-                    {
-                        id:1,
-                        name:'',
-                        icon:'',
-                        detail:'',
-                        img: ''
-                    },
-                    {
-                        id:2,
-                        name:'',
-                        icon:'',
-                        detail:'',
-                        img: ''
-                    },
-                    {
-                        id:3,
-                        name:'',
-                        icon:'',
-                        detail:'',
-                        img: ''
-                    },
-                    {
-                        id:4,
-                        name:'',
-                        icon:'',
-                        detail:'',
-                        img: ''
-                    },
-                    {
-                        id:5,
-                        name:'',
-                        icon:'',
-                        detail:'',
-                        img: ''
-                    },
-                    {
-                        id:6,
-                        name:'',
-                        icon:'',
-                        detail:'',
-                        img: ''
-                    },
-                    {
-                        id:7,
-                        name:'',
-                        icon:'',
-                        detail:'',
-                        img: ''
-                    },
-                    {
-                        id:8,
-                        name:'',
-                        icon:'',
-                        detail:'',
-                        img: ''
-                    },
+                   
                     
                 ],
                 
