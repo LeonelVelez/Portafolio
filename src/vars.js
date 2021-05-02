@@ -107,7 +107,7 @@ Paragraphs:
                     {
                         id:1,
                         name:'javascript',
-                        icon: <DiJavascript1 size="330px 330px" color="rgb(36, 34, 34)" />,
+                        icon: <DiJavascript1 size="330px 330px" color="rgb(36, 34, 34)" className="icon" />,
                         detail:'',
                         img: imgjs
                         
@@ -115,7 +115,7 @@ Paragraphs:
                     {
                         id:2,
                         name:'react',
-                        icon: <DiReact size="330px 330px" color="rgb(36, 34, 34)" />,
+                        icon: <DiReact size="330px 330px" color="rgb(36, 34, 34)" className="icon" />,
                         detail:'',
                         img: imgreact,
                         imgSize : '600px 350px'
@@ -124,7 +124,7 @@ Paragraphs:
                     {
                         id:3,
                         name:'angular',
-                        icon: <DiAngularSimple size="330px 330px" color="rgb(36, 34, 34)" />,
+                        icon: <DiAngularSimple size="330px 330px" color="rgb(36, 34, 34)" className="icon" />,
                         detail:'',
                         img: imgangular,
                         imgSize : '680px 350px'
@@ -133,7 +133,7 @@ Paragraphs:
                     {
                         id:4,
                         name:'typescript',
-                        icon: <SiTypescript size="100px 300px" color="rgb(36, 34, 34)"/>,
+                        icon: <SiTypescript size="100px 300px" color="rgb(36, 34, 34)" className="icon"/>,
                         detail:'',
                         img: imgts,
                         imgSize : '250px 250px'
@@ -141,7 +141,7 @@ Paragraphs:
                     {
                         id:5,
                         name:'nodejs',
-                        icon: <DiNodejs size="330px 330px"  color="rgb(36, 34, 34)"/>,
+                        icon: <DiNodejs size="330px 330px"  color="rgb(36, 34, 34)" className="icon"/>,
                         detail:'', 
                         img: imgnode,
                         imgSize : '350px 200px'
@@ -149,7 +149,7 @@ Paragraphs:
                     {
                         id:6,
                         name:'ionic',
-                        icon: <DiIonic  size="330px 330px" color="rgb(36, 34, 34)"/>,
+                        icon: <DiIonic  size="330px 330px" color="rgb(36, 34, 34)" className="icon"/>,
                         detail:'',
                         img: imgionic,
                         imgSize : '400px 350px'
@@ -164,7 +164,7 @@ Paragraphs:
                     {
                         id:1,
                         name:'c#',
-                        icon:<SiCsharp size="330px 330px" color="rgb(36, 34, 34)" />,
+                        icon:<SiCsharp size="330px 330px" color="rgb(36, 34, 34)" className="icon"/>,
                         detail:'',
                         img: imgcsharp,
                         imgSize : '280px 350px'
@@ -172,7 +172,7 @@ Paragraphs:
                     {
                         id:2,
                         name:'postman',
-                        icon: <SiPostman  size="330px 330px"  color="rgb(36, 34, 34)"/>,
+                        icon: <SiPostman  size="330px 330px"  color="rgb(36, 34, 34)" className="icon"/>,
                         detail:'',
                         img: imgpostman,
                         imgSize : '400px 350px'
@@ -180,7 +180,7 @@ Paragraphs:
                     {
                         id:3,
                         name:'docker',
-                        icon: <DiDocker size="330px 330px" color="rgb(36, 34, 34)" />,
+                        icon: <DiDocker size="330px 330px" color="rgb(36, 34, 34)" className="icon" />,
                         detail:'',
                         img: imgdocker,
                         imgSize : '270px 200px'
@@ -188,7 +188,7 @@ Paragraphs:
                     {
                         id:4,
                         name:'git',
-                        icon:<DiGit size="330px 330px"  color="rgb(36, 34, 34)"/>,
+                        icon:<DiGit size="330px 330px"  color="rgb(36, 34, 34)" className="icon"/>,
                         detail:'',
                         img: imggit,
                         imgSize : '390px 300px'

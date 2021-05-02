@@ -5,11 +5,21 @@ import './tech.css'
 
 const Tech = (props)=>{
 
+    let name = props.nanmeTech;
+    if(props.nanmeTech.length > 0)
+    {
+        name = name[0].toUpperCase()  + name.substr(1).toLowerCase();
 
+    }
     return (<>
             <div>
                 <section id="tech">
-                    {props.icon}
+                    <section className='descripcion'>
+                        <p>{name}</p>
+                    </section>
+                    <p id="icon"></p>                    
+                    < > {props.icon} </>
+                     
                 </section>
             </div>
         </>);

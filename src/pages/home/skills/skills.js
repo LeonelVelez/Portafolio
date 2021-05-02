@@ -59,7 +59,7 @@ let Skills = (props)=>{
     
     const generateGridEelement = (recorre)=>{
        const retorno =  recorre.map((recorreItem, index)=>{
-        return <Tech key={index} icon={recorreItem.icon} ></Tech>
+        return <Tech key={index} icon={recorreItem.icon} nanmeTech={recorreItem.name} ></Tech>
              
         });
 
