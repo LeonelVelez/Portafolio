@@ -23,11 +23,12 @@
 
 .icon{
     
-    transition: .4s;
+    transition: .7s;
 }
 #tech:hover .icon
 {
-    transform: scale(0.5);
+    transform: scale(0.5) rotateX(350deg);
+    
 }
 
 #tech:hover .descripcion > *
@@ -54,7 +55,7 @@
 {
     
     font-weight: 700;
-    
+    font-size: 30px;
     color: transparent;
     transition: 0.4s;
     transform: translateY(-2000px);
