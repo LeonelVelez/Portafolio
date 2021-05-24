@@ -61,3 +61,17 @@
     transform: translateY(-2000px);
 
 }
+
+@media screen and (max-width: 500px)
+{
+    #tech .icon
+    {
+        transform: scale(0.7);        
+    }
+
+    .descripcion > *
+    {                
+        font-size: 14px;     
+    }
+
+}

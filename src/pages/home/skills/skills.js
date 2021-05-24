@@ -3,6 +3,7 @@ import './skills.css'
 import Grid from './../../../components/grid/grid'
 import Vars from './../../../vars'
 import  Tech from './tech/tech'
+import ContainerViewPort from './../../../components/containerviewPort/containerviewPort';
 
 let Skills = (props)=>{
     
@@ -108,14 +109,26 @@ let Skills = (props)=>{
     dividedItemsSkills = divideArray();
 
     
-    return (<>
-        <h2>I Can Help U With This ...</h2>        
+
+    const onFocusViewPort = (e)=>{
+        if(e.type === 'skills' && e.match)
         {        
-            
-            generateGrid()
-        }
-      
+            props.onFocusViewPort({colorHeader:{menu:'var(--color-secondary)', nav:'var(--color-secondary)'}, type:e.type})    
+        }        
+    }
+
+    return (<>
+        <ContainerViewPort type={'skills'}  documentInfo={props.documentInfo} onFocusViewPort={onFocusViewPort} >
+            <h2>I Can Help U With This ...</h2>        
+            {        
+                
+                generateGrid()
+            }    
+        </ContainerViewPort>
+              
     </>);
+
+
 }
 
 export default Skills;
