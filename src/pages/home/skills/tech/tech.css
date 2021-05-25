@@ -24,6 +24,7 @@
 .icon{
     
     transition: .7s;
+    transform: scale(0.7);
 }
 #tech:hover .icon
 {
