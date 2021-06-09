@@ -11,7 +11,9 @@ export default class Proyects extends Component
     render()
     {
         return (<> 
-            <GridProyects></GridProyects>
+            <GridProyects>
+                
+            </GridProyects>
         </>);
     }
 

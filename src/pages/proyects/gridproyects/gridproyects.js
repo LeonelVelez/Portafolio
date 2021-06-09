@@ -12,7 +12,7 @@ export default class GridProyects extends Component
     {
         return (<> 
             <section id="gridProyects">
-                               
+                {this.props.children}              
             </section>
         
         </>);
