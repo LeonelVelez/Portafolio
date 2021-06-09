@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/header/header'
 import Home from './pages/home/home';
 import Services from './pages/services/servicies'
+import Proyects from './pages/proyects/proyects'
 class App extends Component {  
   constructor(props)
   {
@@ -31,6 +32,7 @@ class App extends Component {
             <Route exact path='/' render={(props)=>(this.getPage('Home', props))}></Route>
             <Route exact path='/home' render={(props)=>(this.getPage('Home', props))}></Route>
             <Route exact path='/services' render={(props)=>(this.getPage('Services', props))}></Route>
+            <Route exact path='/proyects' render={(props)=>(this.getPage('Proyects', props))}></Route>
           </Switch>
         </BrowserRouter>
         
@@ -88,6 +90,9 @@ class App extends Component {
       case 'Services':
         pageSolicitada = <Services {...props}  ></Services>
         break;
+      case 'Proyects':
+          pageSolicitada = <Proyects {...props}  ></Proyects>
+          break;
     }
 
     return pageSolicitada
