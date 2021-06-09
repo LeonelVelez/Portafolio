@@ -14,11 +14,14 @@ const Tech = (props)=>{
     return (<>
             <div>
                 <section id="tech">
-                    <section className='descripcion'>
-                        <p>{name}</p>
-                    </section>
-                    <p id="icon"></p>                    
-                    < > {props.icon} </>
+                    
+                        <section className='descripcion'>
+                            <p>{name}</p>
+                        </section>
+                        <p id="icon"></p>                    
+                        < > {props.icon} </>
+                    
+                    
                      
                 </section>
             </div>

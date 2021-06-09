@@ -159,7 +159,7 @@
 
 @media screen and (max-width: 1300px)
 {
-    #grid-5-1, #grid-5-2
+    #grid-5-1, #grid-5-2, #grid-5-3 
     {
         
         grid-template-columns: repeat(3, 1fr);

@@ -197,7 +197,56 @@ Paragraphs:
                     
                 ],
                 
-            } 
+            },
+            {
+                id:3,
+                type:'Back End',
+                items:[
+                    {
+                        id:1,
+                        name:'c#',
+                        icon:<SiCsharp size="330px 330px" color="rgb(36, 34, 34)" className="icon"/>,
+                        detail:'',
+                        img: imgcsharp,
+                        imgSize : '280px 350px'
+                    },
+                    {
+                        id:2,
+                        name:'postman',
+                        icon: <SiPostman  size="330px 330px"  color="rgb(36, 34, 34)" className="icon"/>,
+                        detail:'',
+                        img: imgpostman,
+                        imgSize : '400px 350px'
+                    },
+                    {
+                        id:3,
+                        name:'docker',
+                        icon: <DiDocker size="330px 330px" color="rgb(36, 34, 34)" className="icon" />,
+                        detail:'',
+                        img: imgdocker,
+                        imgSize : '270px 200px'
+                    },
+                    {
+                        id:4,
+                        name:'git',
+                        icon:<DiGit size="330px 330px"  color="rgb(36, 34, 34)" className="icon"/>,
+                        detail:'',
+                        img: imggit,
+                        imgSize : '390px 300px'
+                    },
+                    {
+                        id:5,
+                        name:'git',
+                        icon:<DiGit size="330px 330px"  color="rgb(36, 34, 34)" className="icon"/>,
+                        detail:'',
+                        img: imggit,
+                        imgSize : '390px 300px'
+                    }
+                   
+                    
+                ],
+                
+            }  
             
 
         ]             

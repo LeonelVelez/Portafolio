@@ -37,10 +37,9 @@
     left: 15%;
     
     border-radius: 25px;
-    margin-top: 20px;
+    padding-top: 20px;
         
 }
-
 
 #description p, h2 {
     padding: 20px;

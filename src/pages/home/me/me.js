@@ -26,6 +26,7 @@ export default class Me extends Component
                         <div className="child"></div>
                         <ContainerCapa image={imageMe} className="child" id="imagenIlustra" colorCap="var(--color-secondary)" show={this.state.capa.find(x=>x.id===2).show}></ContainerCapa>    
                         <ContainerCapa id="description" className="container column center" background="var(--color-primary)" colorCap="var(--color-secondary)" show={this.state.capa.find(x=>x.id===1).show}  >
+                            <section>
                             <h2> {Vars.Paragraphs.home.me.tile} </h2>
                             <p> 
                                 {Vars.Paragraphs.home.me.body}
@@ -42,6 +43,8 @@ export default class Me extends Component
                                     <button className="button outline ">Or maybe my Porfafolio</button>                                                        
                                 </div>                                                       
                             </p>                            
+                            </section>
+                            
                         </ContainerCapa>                                                                                                                                
                     </section>
                 </ContainerViewPort>
