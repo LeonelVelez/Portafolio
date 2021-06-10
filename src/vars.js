@@ -250,6 +250,60 @@ Paragraphs:
             
 
         ]             
+    },
+    proyects:{
+        proyects:[
+            {
+                id:1,
+                name:'',
+                date:'',
+                client:'',
+                description:'',
+                imgCover:'',
+                imgDetail:''
+            },
+            {
+                id:2,
+                name:'',
+                date:'',
+                client:'',
+                description:'',
+                imgCover:'',
+                imgDetail:''
+            },
+            {
+                id:3,
+                name:'',
+                date:'',
+                client:'',
+                description:'',
+                imgCover:'',
+                imgDetail:''
+            },
+            {
+                id:4,
+                name:'',
+                date:'',
+                client:'',
+                description:'',
+                imgCover:'',
+                imgDetail:''
+            },
+            {
+                id:5,
+                name:'',
+                date:'',
+                client:'',
+                description:'',
+                imgCover:'',
+                imgDetail:''
+            }
+
+
+            
+        
+
+        ]
     }    
 }
 }
