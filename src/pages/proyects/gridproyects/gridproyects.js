@@ -20,6 +20,11 @@ export default class GridProyects extends Component
         {
             this.addRows(1);
         }
+        if(window.matchMedia("(max-width: 500px)").matches)
+        {
+            this.addRows(2);
+        }
+
         window.matchMedia("(min-width: 1200px)").addEventListener('change', (x)=>{
             if(x.matches)
             {
@@ -30,6 +35,12 @@ export default class GridProyects extends Component
             if(x.matches)
             {
                 this.addRows(1);
+            }            
+        })
+        window.matchMedia("(max-width: 500px)").addEventListener('change', (x)=>{
+            if(x.matches)
+            {
+                this.addRows(2);
             }            
         })
         
@@ -63,7 +74,13 @@ export default class GridProyects extends Component
         let mult = 0;
         if(window.matchMedia("(max-width: 1200px)").matches)
         {
-            mult = 24;
+            if(window.matchMedia("(max-width: 500px)").matches)
+            {
+                mult = 16;
+            }else{
+                mult = 24;
+            }
+            
         }else{
             mult = 16 + 1;
         }
@@ -85,8 +102,16 @@ export default class GridProyects extends Component
                     {
                         if(window.matchMedia("(max-width: 1200px)").matches)
                         {
-                            gridRowFromItem1 = 1;
-                            gridRowToItem1 = 6;
+                            
+                            if(window.matchMedia("(max-width: 500px)").matches)
+                            {
+                                gridRowFromItem1 = 1;
+                                gridRowToItem1 = 4;
+                            }else{
+                                gridRowFromItem1 = 1;
+                                gridRowToItem1 = 6;
+                            }
+                            
                         }else{
                             gridRowFromItem1 = 1;
                             gridRowToItem1 = 7;
@@ -97,7 +122,14 @@ export default class GridProyects extends Component
                         gridRowFromItem1 = gridRowFromItem1+ mult;          
                         if(window.matchMedia("(max-width: 1200px)").matches)
                         {
-                            gridRowToItem1 = gridRowFromItem1 + +5;
+                            if((window.matchMedia("(max-width: 500px)").matches))
+                            {
+                                gridRowToItem1 = gridRowFromItem1 + 3;
+                            }else{
+                                gridRowToItem1 = gridRowFromItem1 +5;
+                            }
+
+                            
                         }else{
                             gridRowToItem1 = gridRowToItem1 + mult;
                         }          
@@ -111,8 +143,15 @@ export default class GridProyects extends Component
                     {
                         if(window.matchMedia("(max-width: 1200px)").matches)
                         {
-                            gridRowFromItem2 = 7;
-                            gridRowToItem2 = 12;
+                            
+                            if(window.matchMedia("(max-width: 500px)").matches)
+                            {
+                                gridRowFromItem2 = 5;
+                                gridRowToItem2 =8;
+                            }else{
+                                gridRowFromItem2 = 7;
+                                gridRowToItem2 = 12;
+                            }
                         }else{
                             gridRowFromItem2 = 4;
                             gridRowToItem2 = 10;
@@ -122,7 +161,12 @@ export default class GridProyects extends Component
                         gridRowFromItem2 = gridRowFromItem2 + mult;                    
                         if(window.matchMedia("(max-width: 1200px)").matches)
                         {
-                            gridRowToItem2 = gridRowFromItem2 + +5;
+                            if((window.matchMedia("(max-width: 500px)").matches))
+                            {
+                                gridRowToItem2 = gridRowFromItem2 + 3;
+                            }else{
+                                gridRowToItem2 = gridRowFromItem2 +5;
+                            }
                         }else{
                             gridRowToItem2 = gridRowToItem2 + mult;
                         }          
@@ -137,8 +181,15 @@ export default class GridProyects extends Component
                     {
                         if(window.matchMedia("(max-width: 1200px)").matches)
                         {
-                            gridRowFromItem3 =13;
-                            gridRowToItem3 = 18;
+                            
+                            if(window.matchMedia("(max-width: 500px)").matches)
+                            {
+                                gridRowFromItem3 =9;
+                                gridRowToItem3 = 12;
+                            }else{
+                                gridRowFromItem3 =13;
+                                gridRowToItem3 = 18;
+                            }
                         }else{
                             gridRowFromItem3 = 8;
                             gridRowToItem3 = 14;
@@ -148,7 +199,12 @@ export default class GridProyects extends Component
                         gridRowFromItem3 = gridRowFromItem3 + mult;                    
                         if(window.matchMedia("(max-width: 1200px)").matches)
                         {
-                            gridRowToItem3 = gridRowFromItem3 + +5;
+                            if((window.matchMedia("(max-width: 500px)").matches))
+                            {
+                                gridRowToItem3 = gridRowFromItem3 + 3;
+                            }else{
+                                gridRowToItem3 = gridRowFromItem3 +5;
+                            }
                         }else{
                             gridRowToItem3 = gridRowToItem3 + mult;
                         }          
@@ -162,8 +218,15 @@ export default class GridProyects extends Component
                     {
                         if(window.matchMedia("(max-width: 1200px)").matches)
                         {
-                            gridRowFromItem4 = 19;
-                            gridRowToItem4 = 24;
+                            
+                            if(window.matchMedia("(max-width: 500px)").matches)
+                            {
+                                gridRowFromItem4 = 13;
+                                gridRowToItem4 =16;
+                            }else{
+                                gridRowFromItem4 = 19;
+                                gridRowToItem4 = 24;
+                            }
                         }else{
                             gridRowFromItem4 = 11;
                             gridRowToItem4 = 17;
@@ -173,7 +236,12 @@ export default class GridProyects extends Component
                         gridRowFromItem4 = gridRowFromItem4 + mult;                    
                         if(window.matchMedia("(max-width: 1200px)").matches)
                         {
-                            gridRowToItem4 = gridRowFromItem4 + +5;
+                            if((window.matchMedia("(max-width: 500px)").matches))
+                            {
+                                gridRowToItem2 = gridRowFromItem4 + 3;
+                            }else{
+                                gridRowToItem2 = gridRowFromItem4 +5;
+                            }
                         }else{
                             gridRowToItem4 = gridRowToItem4 + mult;
                         }          
@@ -196,21 +264,78 @@ export default class GridProyects extends Component
     
                 case 'item-1':                 
 
-                    this.lengthRows = this.lengthRows +  ( type===0?7:6)
+                    switch(type)
+                    {
+                        case 0:
+                            this.lengthRows = this.lengthRows + 7;
+                        break;
+
+                        case 1:
+                            this.lengthRows = this.lengthRows + 6;
+                        break;
+
+                        case 2:
+                            this.lengthRows = this.lengthRows + 4;
+                        break;
+
+                    }
+                    
                     break;
                     
                 case 'item-2':
-                    this.lengthRows = this.lengthRows + ( type===0?3:6)
+                    switch(type)
+                    {
+                        case 0:
+                            this.lengthRows = this.lengthRows + 3;
+                        break;
+
+                        case 1:
+                            this.lengthRows = this.lengthRows + 6;
+                        break;
+
+                        case 2:
+                            this.lengthRows = this.lengthRows + 4;
+                        break;
+
+                    }
                     break;
                     
     
                 case 'item-3':
-                    this.lengthRows = this.lengthRows + ( type===0?4:6)
+                    switch(type)
+                    {
+                        case 0:
+                            this.lengthRows = this.lengthRows + 4;
+                        break;
+
+                        case 1:
+                            this.lengthRows = this.lengthRows + 6;
+                        break;
+
+                        case 2:
+                            this.lengthRows = this.lengthRows + 4;
+                        break;
+
+                    }
                     break;
                     
     
                 case 'item-4':
-                    this.lengthRows = this.lengthRows + ( type===0?2:6)
+                    switch(type)
+                    {
+                        case 0:
+                            this.lengthRows = this.lengthRows + 2;
+                        break;
+
+                        case 1:
+                            this.lengthRows = this.lengthRows + 6;
+                        break;
+
+                        case 2:
+                            this.lengthRows = this.lengthRows + 4;
+                        break;
+                    }       
+                    
                     break;
                     
             }   
