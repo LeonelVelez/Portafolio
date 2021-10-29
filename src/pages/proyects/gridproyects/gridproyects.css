@@ -40,6 +40,31 @@
     
 }
 
+#gridProyects > * 
+{
+    transition: 0.2s;
+}
+#gridProyects .item-1:hover
+ {
+     
+     cursor: pointer;
+ }
+
+ #gridProyects .item-2:hover
+ {
+    cursor: pointer;
+ }
+
+ #gridProyects .item-3:hover
+ {
+    cursor: pointer;
+ }
+
+ #gridProyects .item-4:hover
+ {
+    cursor: pointer;
+ }
+
 @media screen and (max-width: 1200px) { 
     
     #gridProyects

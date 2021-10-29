@@ -8,9 +8,7 @@ export default class GridProyects extends Component
     {
         super(props)
 
-        this.props.children.forEach(re=>{
-            console.log(re);
-        })
+       
         
         if(window.matchMedia("(min-width: 1200px)").matches)
         {
