@@ -11,7 +11,7 @@ import imgpostman from './img/skills/postman.png'
 import imggit from './img/skills/git.png'
 import imgionic from './img/skills/ionic.jpeg'
 import { BsHouse,BsFolder,BsPlay,BsLayoutTextWindowReverse } from "react-icons/bs";
-import { DiAngularSimple, DiReact, DiJavascript1, DiNodejs, DiIonic, DiDocker, DiGit} from "react-icons/di";
+import { DiAngularSimple, DiReact, DiJavascript1, DiNodejs, DiIonic, DiDocker, DiGit, DiPython, DiGoogleCloudPlatform} from "react-icons/di";
 import { SiTypescript, SiCsharp, SiPostman} from "react-icons/si";
 
 
@@ -192,7 +192,16 @@ Paragraphs:
                         detail:'',
                         img: imggit,
                         imgSize : '390px 300px'
+                    },
+                    {
+                        id:4,
+                        name:'python',
+                        icon:<DiPython size="330px 330px" color="rgb(36, 34, 34)" className="icon"/>,
+                        detail:'',
+                        img: imgcsharp,
+                        imgSize : '280px 350px'
                     }
+
                    
                     
                 ],
@@ -200,49 +209,16 @@ Paragraphs:
             },
             {
                 id:3,
-                type:'Back End',
-                items:[
+                type:'Cloud Computing',
+                items:[                 
                     {
                         id:1,
-                        name:'c#',
-                        icon:<SiCsharp size="330px 330px" color="rgb(36, 34, 34)" className="icon"/>,
-                        detail:'',
-                        img: imgcsharp,
-                        imgSize : '280px 350px'
-                    },
-                    {
-                        id:2,
-                        name:'postman',
-                        icon: <SiPostman  size="330px 330px"  color="rgb(36, 34, 34)" className="icon"/>,
+                        name:'google cloud',
+                        icon: <DiGoogleCloudPlatform  size="330px 330px"  color="rgb(36, 34, 34)" className="icon"/>,
                         detail:'',
                         img: imgpostman,
                         imgSize : '400px 350px'
-                    },
-                    {
-                        id:3,
-                        name:'docker',
-                        icon: <DiDocker size="330px 330px" color="rgb(36, 34, 34)" className="icon" />,
-                        detail:'',
-                        img: imgdocker,
-                        imgSize : '270px 200px'
-                    },
-                    {
-                        id:4,
-                        name:'git',
-                        icon:<DiGit size="330px 330px"  color="rgb(36, 34, 34)" className="icon"/>,
-                        detail:'',
-                        img: imggit,
-                        imgSize : '390px 300px'
-                    },
-                    {
-                        id:5,
-                        name:'git',
-                        icon:<DiGit size="330px 330px"  color="rgb(36, 34, 34)" className="icon"/>,
-                        detail:'',
-                        img: imggit,
-                        imgSize : '390px 300px'
                     }
-                   
                     
                 ],
                 
