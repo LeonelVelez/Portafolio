@@ -91,8 +91,8 @@ Paragraphs:
         },
         me:{
             tile:`Who i'm? How can i help u?`,
-            body:`Well! I'm software engineer, I'm 22 years old and I have worked on many software proyects in Guayaquil, Ecuador.
-            As you can see, I can speak both languages (english and spanish), and this is not the only skill I have. Next,  you can check out my skills and Portafolio.`,
+            body:`Well! I'm software engineer, I'm 22 years old and I have worked on many software proyects in Ecuador and Argentina.
+            You can check out my skills and my personals proyects.`,
             footer:{
                 cita: `"La ignorancia es la cuna del miedo pero a mi no me da miedo preguntar por qué?"`,
                 autor: `Roberto Musso`

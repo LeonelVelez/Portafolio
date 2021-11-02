@@ -119,7 +119,7 @@ let Skills = (props)=>{
 
     return (<>
         <ContainerViewPort type={'skills'}  documentInfo={props.documentInfo} onFocusViewPort={onFocusViewPort} >
-            <h2>I Can Help U With This ...</h2>        
+            <h2>My Skills...</h2>        
             {        
                 
                 generateGrid()
