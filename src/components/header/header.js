@@ -103,6 +103,7 @@ export default class Header extends Component {
 
   
   actionMenu = ()=>{    
+    console.log("abro menu")
     if (!this.state.menu.open)
     {
       

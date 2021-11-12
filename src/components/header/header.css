@@ -75,6 +75,7 @@ header section, #logoHeader{
 
 }
 
+
 #logoMenu:hover{
     
     cursor: pointer;    
@@ -99,6 +100,7 @@ header section, #logoHeader{
 
 }
 
+
 #logoHeader:hover
 {
     cursor: pointer;
@@ -110,6 +112,7 @@ header section, #logoHeader{
     height: 1px;
     width: 30px;
     border-style:solid ;
+    z-index: 2;
     
     margin: 2px;
     transition: 0.2s;    
